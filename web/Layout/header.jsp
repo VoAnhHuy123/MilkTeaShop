@@ -117,82 +117,10 @@
                         <div class="box-heading" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="categorymenu-dropdown">All Categories<span class="dropdown-arrow"></span></div>
                         <div class="box-content categorymenu_block dropdown-menu" aria-labelledby="verticalmenu-dropdown">
                             <ul id="nav-one" class="dropmenu">
-                                <li class="top_level dropdown main"><a href="index98dc.html?route=product/category&amp;path=20">Foods</a>
-
-                                    <div class="dropdown-menu megamenu column3">
-                                        <div class="dropdown-inner">
-                                            <ul class="list-unstyled childs_1">
-                                                <!-- 2 Level Sub Categories START -->
-                                                <li class="dropdown"><a href="indexd9fe.html?route=product/category&amp;path=20_26">Fast Food</a>
-
-                                                    <div class="dropdown-menu">
-                                                        <div class="dropdown-inner">
-                                                            <ul class="list-unstyled childs_2">
-                                                                <li><a href="index1cfb.html?route=product/category&amp;path=20_26_53">Mexican</a></li>
-                                                                <li><a href="index5b8a.html?route=product/category&amp;path=20_26_54">Noodles</a></li>
-                                                                <li><a href="index5924.html?route=product/category&amp;path=20_26_55">Macaroni</a></li>
-                                                                <li><a href="indexde9c.html?route=product/category&amp;path=20_26_56">Beggar</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-
-                                                </li>
-                                                <!-- 2 Level Sub Categories END -->
-
-                                            </ul>
-                                            <ul class="list-unstyled childs_1">
-                                                <!-- 2 Level Sub Categories START -->
-                                                <li class="dropdown"><a href="indexdd46.html?route=product/category&amp;path=20_43">Snacks</a>
-
-                                                    <div class="dropdown-menu">
-                                                        <div class="dropdown-inner">
-                                                            <ul class="list-unstyled childs_2">
-                                                                <li><a href="index4639.html?route=product/category&amp;path=20_43_38">Cookies</a></li>
-                                                                <li><a href="index1668.html?route=product/category&amp;path=20_43_37">Bread</a></li>
-                                                                <li><a href="indexcd26.html?route=product/category&amp;path=20_43_39">Sandwich</a></li>
-                                                                <li><a href="index24a8.html?route=product/category&amp;path=20_43_40">Salad</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-
-                                                </li>
-                                                <!-- 2 Level Sub Categories END -->
-
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                </li>
-                                <li class="top_level main"><a href="index0027.html?route=product/category&amp;path=27">Brown rice</a></li>
-                                <li class="top_level main"><a href="index13cb.html?route=product/category&amp;path=28">Crustacean</a></li>
-                                <li class="top_level main"><a href="indexd056.html?route=product/category&amp;path=50">Seafood</a></li>
-                                <li class="top_level main"><a href="index4516.html?route=product/category&amp;path=51">French fries</a></li>
-                                <li class="top_level dropdown main"><a href="index1647.html?route=product/category&amp;path=25">Junk Food</a>
-
-                                    <div class="dropdown-menu megamenu column1">
-                                        <div class="dropdown-inner">
-                                            <ul class="list-unstyled childs_1">
-                                                <!-- 2 Level Sub Categories START -->
-                                                <li><a href="index955a.html?route=product/category&amp;path=25_32">Noodles</a></li>
-                                                <!-- 2 Level Sub Categories END -->
-                                                <!-- 2 Level Sub Categories START -->
-                                                <li><a href="index7496.html?route=product/category&amp;path=25_35">Pizza</a></li>
-                                                <!-- 2 Level Sub Categories END -->
-                                                <!-- 2 Level Sub Categories START -->
-                                                <li><a href="index68a7.html?route=product/category&amp;path=25_30">Cheesecake</a></li>
-                                                <!-- 2 Level Sub Categories END -->
-
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                </li>
-                                <li class="top_level main"><a href="index81d2.html?route=product/category&amp;path=49">Roasted</a></li>
-                                <li class="top_level main"><a href="indexb152.html?route=product/category&amp;path=17">Chicken</a></li>
-                                <li class="top_level main"><a href="indexc7ff.html?route=product/category&amp;path=52">Pasta</a></li>
-                                <li class="top_level main"><a href="indexc957.html?route=product/category&amp;path=24">Featured</a></li>
-                                <li class="top_level main"><a href="index8e1e.html?route=product/category&amp;path=31">Soup</a></li>
-                                <li class="top_level main"><a href="index68ea.html?route=product/category&amp;path=33">Macaroni</a></li>
+                                <% while (rs.next()) {
+                                %>
+                                <li class="top_level main"><a href="<%= "/lab7/DisplayListProduct?type=" + rs.getInt(1)%>"><%= rs.getString("name")%></a></li>
+                                <% } %>
                             </ul>
                         </div>
                     </div>
