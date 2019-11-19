@@ -28,7 +28,7 @@ public class Index extends HttpServlet {
             ResultSet sr1 = s1.executeQuery(sql1);
             request.setAttribute("a", sr);
             request.setAttribute("b", sr1);
-            request.getRequestDispatcher("index.jsp").forward(request, response);
+            request.getRequestDispatcher("Index.jsp").forward(request, response);
 //            request.getRequestDispatcher("Listproduct.jsp").forward(request, response);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();

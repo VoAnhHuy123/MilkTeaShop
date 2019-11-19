@@ -7,10 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e5fcb9d-ee25-4038-be42-644a316d4baf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/MilkTeaShop_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/MilkTeaShop_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MilkTeaShop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MilkTeaShop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Layout/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Listproduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Listproduct.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/annotations-api.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/annotations-api.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/catalina-ant.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/catalina-ant.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/catalina-ha.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/catalina-ha.jar" afterDir="false" />
@@ -36,9 +42,11 @@
       <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/tomcat-util.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/tomcat-util.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/tomcat-websocket.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/tomcat-websocket.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/websocket-api.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/websocket-api.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Layout/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Listproduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Listproduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Controller/Display/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Controller/Display/Index.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/DB/ConnectionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vn/edu/nlu/fit/DB/ConnectionDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Register.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,8 +60,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="FxmlFile" />
+        <option value="Tag Library Descriptor" />
+        <option value="HTML File" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -72,10 +83,11 @@
   </component>
   <component name="ProjectId" id="1TBBCiNcVSAQqwCmAu6Qsl2tVFc" />
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/PhanMemHoc/TomCat/apache-tomcat-8.5.45/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Demo1" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -85,7 +97,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -100,7 +112,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="TOMCAT" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.45" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="TOMCAT" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.27" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="MilkTeaShop:war exploded">
@@ -191,6 +203,14 @@
       <workItem from="1573453543374" duration="1050000" />
       <workItem from="1573613966856" duration="140000" />
       <workItem from="1573615172996" duration="2933000" />
+      <workItem from="1573626512168" duration="11318000" />
+      <workItem from="1573696029977" duration="7662000" />
+      <workItem from="1573715220796" duration="3231000" />
+      <workItem from="1573781374471" duration="1342000" />
+      <workItem from="1573801262531" duration="5063000" />
+      <workItem from="1573876451931" duration="842000" />
+      <workItem from="1574044126411" duration="4039000" />
+      <workItem from="1574132832245" duration="259000" />
     </task>
     <servers />
   </component>

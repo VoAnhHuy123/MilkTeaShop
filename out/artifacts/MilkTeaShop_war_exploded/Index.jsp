@@ -1,3 +1,4 @@
+<%@ page import="java.sql.ResultSet" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>﻿
 <!DOCTYPE html>
 <!--[if IE]><![endif]-->
@@ -65,6 +66,7 @@
 
 
 <body class="common-home layout-1">
+<% ResultSet rs = (ResultSet) request.getAttribute("a"); %>
 <%@ include file="Layout/header.jsp" %>
 
 <div class="wrap-breadcrumb parallax-breadcrumb">

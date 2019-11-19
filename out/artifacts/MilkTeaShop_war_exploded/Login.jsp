@@ -1,3 +1,5 @@
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="vn.edu.nlu.fit.util.Util" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>﻿
 
 <!DOCTYPE html>
@@ -58,6 +60,7 @@
 
 
 <body class="account-login layout-2 left-col">
+<% ResultSet rs = (ResultSet) request.getAttribute("a"); %>
 <%@ include file="Layout/header.jsp" %>
 
 
@@ -128,7 +131,7 @@
                     <div class="well">
                         <h3>Returning Customer</h3>
                         <p><strong>I am a returning customer</strong></p>
-                        <form action="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/login" method="post" enctype="multipart/form-data">
+                        <form action="<%=Util.fullPath("DoLogin")%>" method="post">
                             <div class="form-group">
                                 <label class="control-label" for="input-email">E-Mail Address</label>
                                 <input type="text" name="email" value="" placeholder="E-Mail Address" id="input-email" class="form-control" />
@@ -138,7 +141,7 @@
                                 <input type="password" name="password" value="" placeholder="Password" id="input-password" class="form-control" />
                                 <a href="indexacda.html?route=account/forgotten">Forgotten Password</a></div>
                             <input type="submit" value="Login" class="btn btn-primary" />
-                            <input type="hidden" name="redirect" value="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/account" />
+                            <input type="hidden" name="redirect" />
                         </form>
                     </div>
                 </div>
