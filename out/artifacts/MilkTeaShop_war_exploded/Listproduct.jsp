@@ -71,6 +71,7 @@
 
 
 <body class="product-category-20 layout-2 left-col">
+<% ResultSet rs = (ResultSet) request.getAttribute("a"); %>
 <%@ include file="Layout/header.jsp" %>
 <div class="wrap-breadcrumb parallax-breadcrumb">
     <div class="container"></div>
@@ -547,7 +548,7 @@
                         <div class="product-block-inner">
                             <div class="image">
                                 <a href="index5f5b.html?route=product/product&amp;path=20&amp;product_id=32">
-                                    <img src="<%= ss.getString("img")%>" title="Reprehenderit Aliquam"
+                                    <img src="<%= ss.getString("image")%>" title="Reprehenderit Aliquam"
                                          alt="Reprehenderit Aliquam" class="img-responsive reg-image"/>
                                     <img class="img-responsive hover-image" src="image/cache/catalog/05-256x256.jpg"
                                          title="Reprehenderit Aliquam" alt="Reprehenderit Aliquam"/>
