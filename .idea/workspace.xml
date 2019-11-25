@@ -7,24 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e5fcb9d-ee25-4038-be42-644a316d4baf" name="Default Changelist" comment="">
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Layout/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Listproduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Listproduct.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MilkTeaShop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MilkTeaShop.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Servlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Servlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Servlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Servlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Controller/Display/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Controller/Display/Index.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Controller/Display/ListProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Controller/Display/ListProduct.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/DB/ConnectionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vn/edu/nlu/fit/DB/ConnectionDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Layout/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Listproduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Listproduct.jsp" afterDir="false" />
->>>>>>> 796123b9dbdadb862bc467a318237530d44b761c
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +55,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="E:/apache-tomcat-9.0.27/apache-tomcat-9.0.27/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -188,15 +178,11 @@
       <workItem from="1573801262531" duration="5063000" />
       <workItem from="1573876451931" duration="842000" />
       <workItem from="1574044126411" duration="4039000" />
-<<<<<<< HEAD
-      <workItem from="1574132832245" duration="1623000" />
-      <workItem from="1574651758593" duration="1942000" />
-      <workItem from="1574654781681" duration="569000" />
-=======
       <workItem from="1574132832245" duration="259000" />
       <workItem from="1574146481291" duration="2339000" />
       <workItem from="1574149780248" duration="3620000" />
->>>>>>> 796123b9dbdadb862bc467a318237530d44b761c
+      <workItem from="1574657052661" duration="448000" />
+      <workItem from="1574657772686" duration="3659000" />
     </task>
     <servers />
   </component>

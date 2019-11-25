@@ -44,11 +44,12 @@ public class ListProduct extends HttpServlet {
             ResultSet sr = s.executeQuery(sql);
             if (type != null) sql1 += " AND type_id =" + "'" + type + "'";
             response.getWriter().println(sql1);
+            response.getWriter().println("hagdsjssfehsabfhj");
             ResultSet sr1 = s1.executeQuery(sql1);
             response.getWriter().println("d");
             request.setAttribute("a", sr);
             request.setAttribute("b", sr1);
-//            response.getWriter().println("hagdsjssfehsabfhj");
+
             request.getRequestDispatcher("Listproduct.jsp").forward(request, response);
 
         } catch (ClassNotFoundException e) {

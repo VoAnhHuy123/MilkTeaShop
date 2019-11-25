@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class ConnectionDB {
-    static Connection con;
+    public static Connection con;
 
     public static Statement connect() throws ClassNotFoundException, SQLException {
         if (con==null||con.isClosed()) {
