@@ -1,7 +1,5 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-﻿
-
 <!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <!--[if IE 8 ]><html dir="ltr" lang="en" class="ie8"><![endif]-->

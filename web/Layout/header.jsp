@@ -1,5 +1,6 @@
 <%@ page import="vn.edu.nlu.fit.util.Util" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <nav id="top" class="nav-top">
     <div class="container">
         <div id="cznavcmsblock">
