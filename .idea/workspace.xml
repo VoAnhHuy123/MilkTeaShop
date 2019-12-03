@@ -7,26 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e5fcb9d-ee25-4038-be42-644a316d4baf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MilkTeaShop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MilkTeaShop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Layout/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Layout/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Layout/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Listproduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Listproduct.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Auth/DoRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Auth/DoRegister.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/Resgister.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/Resgister.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Auth/DoRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Auth/DoRegister.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/Resgister.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/Resgister.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Auth/DoRegister.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Controller/Display/Resgister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Controller/Display/Resgister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Layout/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Layout/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Layout/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Listproduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Listproduct.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Register.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Shopingcart.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/TestShopingCart.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Auth/DoConfirmRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Auth/DoConfirmRegister.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Auth/EmailUtility.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Auth/EmailUtility.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Auth/DoConfirmRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Auth/DoConfirmRegister.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Auth/EmailUtility.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Auth/EmailUtility.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Auth/DoConfirmRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Auth/DoConfirmRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Auth/EmailUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Auth/EmailUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Shopingcart.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/TestShopingCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/ShoppingCart.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,8 +36,9 @@
         <option value="FxmlFile" />
         <option value="Tag Library Descriptor" />
         <option value="HTML File" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -67,7 +61,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab7" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -225,7 +219,12 @@
       <workItem from="1574913268495" duration="1682000" />
       <workItem from="1574915113930" duration="2648000" />
       <workItem from="1574929017957" duration="6385000" />
-      <workItem from="1574988893316" duration="2919000" />
+      <workItem from="1574988893316" duration="7000000" />
+      <workItem from="1575010786205" duration="1729000" />
+      <workItem from="1575258101199" duration="600000" />
+      <workItem from="1575267714116" duration="7089000" />
+      <workItem from="1575279170997" duration="1091000" />
+      <workItem from="1575343523525" duration="2139000" />
     </task>
     <servers />
   </component>

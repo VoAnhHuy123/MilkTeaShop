@@ -61,6 +61,7 @@
     <!-- Codezeel www.codezeel.com - End -->
 
     <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
+    <script src="js/ajax.js"></script>
 </head>
 
 
@@ -329,7 +330,7 @@
                                                             title="Add to Compare " onclick="compare.add('48 ');">
                                                         <i class="fa fa-exchange"></i></button>
                                                     <button type="button" class="addtocart" data-toggle="tooltip"
-                                                            title="Add to Cart " onclick="cart.add('48 ');"><span>Add to Cart</span>
+                                                            title="Add to Cart " onclick="addToCart(1)"><span>Add to Cart</span>
                                                     </button>
                                                 </div>
                                             </div>
