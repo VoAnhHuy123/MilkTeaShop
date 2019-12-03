@@ -15,7 +15,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Foods</title>
+    <title>Product</title>
     <base/>
     <meta name="description" content="Example of category description"/>
 
@@ -50,7 +50,7 @@
     <!-- Codezeel www.codezeel.com - Start -->
     <script type="text/javascript" src="catalog/view/javascript/codezeel/custom.js"></script>
     <script type="text/javascript" src="catalog/view/javascript/codezeel/jstree.min.js"></script>
-    <script type="text/javascript" src="catalog/view/javascript/codezeel/carousel.min.js"></script>
+    <%--    <script type="text/javascript" src="catalog/view/javascript/codezeel/carousel.min.js"></script>--%>
     <script type="text/javascript" src="catalog/view/javascript/codezeel/codezeel.min.js"></script>
     <script type="text/javascript" src="catalog/view/javascript/codezeel/jquery.custom.min.js"></script>
     <script type="text/javascript" src="catalog/view/javascript/codezeel/jquery.formalize.min.js"></script>
@@ -100,7 +100,7 @@
 <div id="product-category" class="container">
     <ul class="breadcrumb">
         <li><a href="index9328.html?route=common/home"><i class="fa fa-home"></i></a></li>
-        <li><a href="index98dc.html?route=product/category&amp;path=20">Foods</a></li>
+        <li><a href="index98dc.html?route=product/category&amp;path=20">Product</a></li>
     </ul>
     <div class="row">
         <aside id="column-left" class="col-sm-3 hidden-xs">
@@ -222,248 +222,25 @@
                 autoplayDisableOnInteraction: false
             });
             --></script>
-            <div class="box special">
-                <div class="container">
-                    <div class="box-heading">Specials</div>
-                    <div class="box-content">
-
-                        <div class="box-product  productbox-grid" id="special-grid">
-                            <div class="product-items">
-                                <div class="product-block product-thumb transition">
-                                    <div class="product-block-inner">
-                                        <div class="image">
-                                            <a href="indexfac8.html?route=product/product&amp;product_id=35">
-                                                <img src="image/cache/catalog/03-85x85.jpg" title="Commodi Consequatur"
-                                                     alt="Commodi Consequatur" class="img-responsive reg-image"/>
-                                                <img class="img-responsive hover-image"
-                                                     src="image/cache/catalog/04-85x85.jpg" title="Commodi Consequatur"
-                                                     alt="Commodi Consequatur"/>
-                                            </a>
-
-
-                                            <span class="saleicon sale">Sale</span>
-
-
-                                            <div class="percentsaving">2% off</div>
-
-                                            <div class="button-group">
-                                                <button class="wishlist" type="button" data-toggle="tooltip"
-                                                        title="Add to Wish List " onclick="wishlist.add('35 ');"><i
-                                                        class="fa fa-heart"></i></button>
-                                                <div class="quickview-button" data-toggle="tooltip" title="Quick view">
-                                                    <a class="quickbox"
-                                                       href="index0a97.html?route=product/quick_view&amp;product_id=35">
-                                                        <i class="fa fa-eye" aria-hidden="true"></i></a></div>
-                                                <button class="compare" type="button" data-toggle="tooltip"
-                                                        title="Add to Compare " onclick="compare.add('35 ');"><i
-                                                        class="fa fa-exchange"></i></button>
-                                                <button type="button" class="addtocart" onclick="cart.add('35 ');">
-                                                    <span>Add to Cart</span></button>
-                                            </div>
-                                        </div>
-
-                                        <div class="product-details">
-                                            <div class="caption">
-
-                                                <div class="rating">
-                                                    <span class="fa fa-stack"><i
-                                                            class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i
-                                                            class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i
-                                                            class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i
-                                                            class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i
-                                                            class="fa fa-star-o fa-stack-2x"></i></span>
-                                                </div>
-
-                                                <h4><a href="indexfac8.html?route=product/product&amp;product_id=35">Commodi
-                                                    Consequatur </a></h4>
-
-
-                                                <p class="price">
-                                                    <span class="price-new">$134.00</span> <span class="price-old">$136.40</span>
-                                                    <span class="price-tax">Ex Tax: $110.00</span>
-                                                </p>
-
-                                                <button type="button" class="addtocart" onclick="cart.add('35 ');">
-                                                    <span>Add to Cart</span></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-items">
-                                <div class="product-block product-thumb transition">
-                                    <div class="product-block-inner">
-                                        <div class="image">
-                                            <a href="indexbb02.html?route=product/product&amp;product_id=42">
-                                                <img src="image/cache/catalog/04-85x85.jpg" title="Consectetur Hampden"
-                                                     alt="Consectetur Hampden" class="img-responsive reg-image"/>
-                                                <img class="img-responsive hover-image"
-                                                     src="image/cache/catalog/10-85x85.jpg" title="Consectetur Hampden"
-                                                     alt="Consectetur Hampden"/>
-                                            </a>
-
-
-                                            <span class="saleicon sale">Sale</span>
-
-
-                                            <div class="percentsaving">8% off</div>
-
-                                            <div class="button-group">
-                                                <button class="wishlist" type="button" data-toggle="tooltip"
-                                                        title="Add to Wish List " onclick="wishlist.add('42 ');"><i
-                                                        class="fa fa-heart"></i></button>
-                                                <div class="quickview-button" data-toggle="tooltip" title="Quick view">
-                                                    <a class="quickbox"
-                                                       href="index6d6f.html?route=product/quick_view&amp;product_id=42">
-                                                        <i class="fa fa-eye" aria-hidden="true"></i></a></div>
-                                                <button class="compare" type="button" data-toggle="tooltip"
-                                                        title="Add to Compare " onclick="compare.add('42 ');"><i
-                                                        class="fa fa-exchange"></i></button>
-                                                <button type="button" class="addtocart" onclick="cart.add('42 ');">
-                                                    <span>Add to Cart</span></button>
-                                            </div>
-                                        </div>
-
-                                        <div class="product-details">
-                                            <div class="caption">
-
-                                                <div class="rating">
-                                                    <span class="fa fa-stack"><i
-                                                            class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i
-                                                            class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i
-                                                            class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i
-                                                            class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i
-                                                            class="fa fa-star-o fa-stack-2x"></i></span>
-                                                </div>
-
-                                                <h4><a href="indexbb02.html?route=product/product&amp;product_id=42">Consectetur
-                                                    Hampden </a></h4>
-
-
-                                                <p class="price">
-                                                    <span class="price-new">$110.00</span> <span class="price-old">$119.60</span>
-                                                    <span class="price-tax">Ex Tax: $90.00</span>
-                                                </p>
-
-                                                <button type="button" class="addtocart" onclick="cart.add('42 ');">
-                                                    <span>Add to Cart</span></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-items">
-                                <div class="product-block product-thumb transition">
-                                    <div class="product-block-inner">
-                                        <div class="image">
-                                            <a href="indexf073.html?route=product/product&amp;product_id=30">
-                                                <img src="image/cache/catalog/05-85x85.jpg" title="Exercitat Virginia"
-                                                     alt="Exercitat Virginia" class="img-responsive reg-image"/>
-                                                <img class="img-responsive hover-image"
-                                                     src="image/cache/catalog/11-85x85.jpg" title="Exercitat Virginia"
-                                                     alt="Exercitat Virginia"/>
-                                            </a>
-
-
-                                            <span class="saleicon sale">Sale</span>
-
-
-                                            <div class="percentsaving">11% off</div>
-
-                                            <div class="button-group">
-                                                <button class="wishlist" type="button" data-toggle="tooltip"
-                                                        title="Add to Wish List " onclick="wishlist.add('30 ');"><i
-                                                        class="fa fa-heart"></i></button>
-                                                <div class="quickview-button" data-toggle="tooltip" title="Quick view">
-                                                    <a class="quickbox"
-                                                       href="indexeca1.html?route=product/quick_view&amp;product_id=30">
-                                                        <i class="fa fa-eye" aria-hidden="true"></i></a></div>
-                                                <button class="compare" type="button" data-toggle="tooltip"
-                                                        title="Add to Compare " onclick="compare.add('30 ');"><i
-                                                        class="fa fa-exchange"></i></button>
-                                                <button type="button" class="addtocart" onclick="cart.add('30 ');">
-                                                    <span>Add to Cart</span></button>
-                                            </div>
-                                        </div>
-
-                                        <div class="product-details">
-                                            <div class="caption">
-
-                                                <div class="rating">
-                                                    <span class="fa fa-stack"><i
-                                                            class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i
-                                                            class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i
-                                                            class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i
-                                                            class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i
-                                                            class="fa fa-star-o fa-stack-2x"></i></span>
-                                                </div>
-
-                                                <h4><a href="indexf073.html?route=product/product&amp;product_id=30">Exercitat
-                                                    Virginia </a></h4>
-
-
-                                                <p class="price">
-                                                    <span class="price-new">$104.00</span> <span class="price-old">$116.00</span>
-                                                    <span class="price-tax">Ex Tax: $85.00</span>
-                                                </p>
-
-                                                <button type="button" class="addtocart" onclick="cart.add('30 ');">
-                                                    <span>Add to Cart</span></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <span class="special_default_width" style="display:none; visibility:hidden"></span>
 
         </aside>
 
         <div id="content" class="col-sm-9">
-            <h1 class="page-title">Foods</h1>
+            <h1 class="page-title">Product</h1>
             <div class="row category_thumb">
                 <div class="col-sm-2 category_img"><img src="image/cache/catalog/category-banner-1113x200.jpg"
                                                         alt="Foods" title="Foods" class="img-thumbnail"/></div>
-                <div class="col-sm-10 category_description"><p>
-                    Example of category description text</p>
-                </div>
             </div>
-            <h3 class="refine-search">Refine Search</h3>
-            <div class="row">
-                <div class="col-sm-12 category_list">
-                    <ul>
-                        <li><a href="indexd9fe.html?route=product/category&amp;path=20_26">Fast Food</a></li>
-                        <li><a href="indexdd46.html?route=product/category&amp;path=20_43">Snacks</a></li>
-                    </ul>
-                </div>
-            </div>
-
             <div class="category_filter">
                 <div class="col-md-4 btn-list-grid">
                     <div class="btn-group">
-                        <button type="button" id="grid-view" class="btn btn-default grid" data-toggle="tooltip"
-                                title="Grid"><i class="fa fa-th"></i></button>
+                        <button type="button" id="grid-view" class="btn btn-default grid active" data-toggle="tooltip"
+                                title="Grid" onclick="gridView()"><i class="fa fa-th"></i></button>
                         <button type="button" id="list-view" class="btn btn-default list" data-toggle="tooltip"
-                                title="List"><i class="fa fa-th-list"></i></button>
+                                title="List" onclick="listView()"><i class="fa fa-th-list"></i></button>
                     </div>
                 </div>
-                <div class="compare-total"><a href="index6431.html?route=product/compare" id="compare-total"> Product
-                    Compare (0)</a></div>
                 <div class="pagination-right">
                     <div class="sort-by-wrapper">
                         <div class="col-md-2 text-right sort-by">
@@ -472,15 +249,15 @@
                         <div class="col-md-3 text-right sort">
                             <select id="input-sort" class="form-control" onchange="location = this.value;">
 
-                                <option value="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=product/category&amp;path=20&amp;sort=p.sort_order&amp;order=ASC "
+                                <option value=""
                                         selected="selected">Default
                                 </option>
 
-                                <option value="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=product/category&amp;path=20&amp;sort=pd.name&amp;order=ASC ">
+                                <option value="">
                                     Name (A - Z)
                                 </option>
 
-                                <option value="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=product/category&amp;path=20&amp;sort=pd.name&amp;order=DESC ">
+                                <option value="">
                                     Name (Z - A)
                                 </option>
 
@@ -548,7 +325,7 @@
                                 <a href="index5f5b.html?route=product/product&amp;path=20&amp;product_id=32">
                                     <img src="<%= ss.getString("image")%>" title="Reprehenderit Aliquam"
                                          alt="Reprehenderit Aliquam" class="img-responsive reg-image"/>
-                                    <img class="img-responsive hover-image" src="image/cache/catalog/05-256x256.jpg"
+                                    <img class="img-responsive hover-image" src="<%= ss.getString("image")%>"
                                          title="Reprehenderit Aliquam" alt="Reprehenderit Aliquam"/>
                                 </a>
 
@@ -590,7 +367,9 @@
                                                 class="fa fa-star-o fa-stack-2x"></i></span>
                                     </div>
 
-                                    <h4><a href="index5f5b.html?route=product/product&amp;path=20&amp;product_id=32"><%= ss.getString("name")%></a></h4>
+                                    <h4>
+                                        <a href="index5f5b.html?route=product/product&amp;path=20&amp;product_id=32"><%= ss.getString("name")%>
+                                        </a></h4>
 
                                     <div class="rating list-rate">
                                         <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i
@@ -606,7 +385,8 @@
                                     </div>
 
                                     <p class="price">
-                                        <span class="price-new"><%= ss.getString("price")%></span> <span class="price-old">$118.40</span>
+                                        <span class="price-new"><%= ss.getString("price")%></span> <span
+                                            class="price-old">$118.40</span>
                                         <span class="price-tax">Ex Tax: $90.00</span>
                                     </p>
 
@@ -638,6 +418,36 @@
     </div>
 </div>
 <%@ include file="Layout/footer.jsp" %>
+<script>
+    var elements = document.getElementsByClassName("image");
+    var i;
+
+    function listView() {
+        for (i = 0; i < elements.length; i++) {
+            elements[i].style.width = "20%";
+        }
+
+    }
+
+    function gridView() {
+        for (i = 0; i < elements.length; i++) {
+            elements[i].style.width = "100%";
+        }
+
+    }
+
+    for (i = 0; i < btns.length; i++) {
+        var container = document.getElementsByClassName("btn-group");
+        var btns = container.getElementsByClassName("btn");
+        btns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("active");
+            pokcurrent[0].className = current[0].className.replace(" active", "-+");
+            this.className += " active";
+        });
+    }
+
+
+</script>
 
 <!--
 OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.

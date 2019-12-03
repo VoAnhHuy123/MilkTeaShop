@@ -1,6 +1,5 @@
 <%@ page import="vn.edu.nlu.fit.util.Util" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <nav id="top" class="nav-top">
     <div class="container">
         <div id="cznavcmsblock">
@@ -151,39 +150,39 @@
                     </div>
 
 
-                    <div id="links_block_top" class="block links">
+<%--                    <div id="links_block_top" class="block links">--%>
 
-                        <ul id="cz_toplink" class="header_blocklink">
-                            <li class="toplink-title">
-                                Quick link
-                                :
-                            </li>
+<%--                        <ul id="cz_toplink" class="header_blocklink">--%>
+<%--                            <li class="toplink-title">--%>
+<%--                                Quick link--%>
+<%--                                :--%>
+<%--                            </li>--%>
 
-                            <li>
-                                <a href="#" title="Our stores">Our stores</a>
-                            </li>
+<%--                            <li>--%>
+<%--                                <a href="#" title="Our stores">Our stores</a>--%>
+<%--                            </li>--%>
 
-                            <li>
-                                <a href="#" title="Transfer">Transfer</a>
-                            </li>
+<%--                            <li>--%>
+<%--                                <a href="#" title="Transfer">Transfer</a>--%>
+<%--                            </li>--%>
 
-                            <li>
-                                <a href="#" title="About us">About us</a>
-                            </li>
+<%--                            <li>--%>
+<%--                                <a href="#" title="About us">About us</a>--%>
+<%--                            </li>--%>
 
-                            <li>
-                                <a href="#" title="Sitemap">Sitemap</a>
-                            </li>
+<%--                            <li>--%>
+<%--                                <a href="#" title="Sitemap">Sitemap</a>--%>
+<%--                            </li>--%>
 
-                            <li>
-                                <a href="#" title="Chiropractic ">Chiropractic </a>
-                            </li>
+<%--                            <li>--%>
+<%--                                <a href="#" title="Chiropractic ">Chiropractic </a>--%>
+<%--                            </li>--%>
 
-                            <li>
-                                <a href="#" title="Delivery Information">Delivery Information</a>
-                            </li>
-                        </ul>
-                    </div>
+<%--                            <li>--%>
+<%--                                <a href="#" title="Delivery Information">Delivery Information</a>--%>
+<%--                            </li>--%>
+<%--                        </ul>--%>
+<%--                    </div>--%>
 
                     <div class="header-cart">
                         <div id="cart" class="btn-group btn-block">
