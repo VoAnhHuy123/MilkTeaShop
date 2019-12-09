@@ -22,26 +22,21 @@ public class Index extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String sql = "SELECT * FROM type WHERE active=1";
+        String sql1 = "SELECT name,type_id,image FROM product WHERE active=1";
+        PreparedStatement qr=null;
+        PreparedStatement qr1=null;
         try {
-            Statement s= ConnectionDB.connect();
-            Statement s1= ConnectionDB.connect();
-
-            String sql = "SELECT * FROM type WHERE active=1";
-            String sql1 = "SELECT name,type_id,image FROM product WHERE active=1";
 //            String sqll = "select name "
-            PreparedStatement qr = con.prepareStatement(sql);
-            PreparedStatement qr1 = con.prepareStatement(sql1);
-
-
+          qr = ConnectionDB.connect(sql);
+           qr1 = ConnectionDB.connect(sql1);
             ResultSet sr1 = qr.executeQuery();
             ResultSet sr2 = qr1.executeQuery();
             request.setAttribute("a", sr1);
             request.setAttribute("b", sr2);
             request.getRequestDispatcher("Index.jsp").forward(request, response);
 //            request.getRequestDispatcher("Listproduct.jsp").forward(request, response);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }

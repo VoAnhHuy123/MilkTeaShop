@@ -2,24 +2,27 @@ package vn.edu.nlu.fit.Model;
 
 import java.util.List;
 
-public class Order {
-    String id;
+public class ShoppingCart {
+    int id;
     List<Item> listItem;
-    User user;
+    int user_id;
     int status;
 
-    public Order(String id, List<Item> listItem, User user, int status) {
+    public ShoppingCart(int id, List<Item> listItem, int user_id, int status) {
         this.id = id;
         this.listItem = listItem;
-        this.user = user;
+        this.user_id = user_id;
         this.status = status;
     }
 
-    public String getId() {
+    public ShoppingCart() {
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -31,12 +34,13 @@ public class Order {
         this.listItem = listItem;
     }
 
-    public User getUser() {
-        return user;
+
+    public int getUser_id() {
+        return user_id;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
     public int getStatus() {

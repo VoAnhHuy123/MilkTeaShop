@@ -1,32 +1,35 @@
 package vn.edu.nlu.fit.Model;
 
 public class Item {
-    String id;
-    MilkTea milkTea;
+    int id;
+    Product product;
     int quantity;
     long price;
 
-    public Item(String id, MilkTea milkTea, int quantity, long price) {
+    public Item(int id, Product product, int quantity, long price) {
         this.id = id;
-        this.milkTea = milkTea;
+        this.product = product;
         this.quantity = quantity;
         this.price = price;
     }
 
-    public String getId() {
+    public Item() {
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public MilkTea getMilkTea() {
-        return milkTea;
+    public Product getProduct() {
+        return product;
     }
 
-    public void setMilkTea(MilkTea milkTea) {
-        this.milkTea = milkTea;
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
     public int getQuantity() {
@@ -41,7 +44,7 @@ public class Item {
         return price;
     }
 
-    public void setPrice(long price) {
-        this.price = price;
+    public void setPrice() {
+        this.price = (long) (this.quantity*this.product.getPrice());
     }
 }

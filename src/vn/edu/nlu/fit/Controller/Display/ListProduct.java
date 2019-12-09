@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -25,16 +26,20 @@ public class ListProduct extends HttpServlet {
         String type = request.getParameter("type");
         response.getWriter().println(type);
         try {
-            Statement s = ConnectionDB.connect();
-            Statement s1 = ConnectionDB.connect();
+
             String sql = "SELECT * FROM type WHERE active=1";
 
             String sql1 = "SELECT name,type_id,price,image FROM product WHERE active=1";
+            PreparedStatement s = ConnectionDB.connect(sql);
+            ResultSet sr = s.executeQuery();
 
-            ResultSet sr = s.executeQuery(sql);
-            if (type != null) sql1 += " AND type_id =" + "'" + type + "'";
+
+            if (type != null) sql1 += " AND type_id =?";
+            PreparedStatement s1 = ConnectionDB.connect(sql1);
+            s1.setString(1, type);
             response.getWriter().println(sql1);
-            ResultSet sr1 = s1.executeQuery(sql1);
+            ResultSet sr1 = s1.executeQuery();
+
             response.getWriter().println("d");
             request.setAttribute("a", sr);
             request.setAttribute("b", sr1);

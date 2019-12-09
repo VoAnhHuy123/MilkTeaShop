@@ -57,7 +57,7 @@ public class DoRegister extends HttpServlet {
 
         try {
             response.getWriter().println("b");
-            Statement st = ConnectionDB.connect();
+
             String a = "insert into users(first_name,last_name,phone,email,`password`,`key`)values(?,?,?,?,?,?)";
             PreparedStatement gg = con.prepareStatement(a);
             gg.setString(1, firstName);
@@ -70,8 +70,6 @@ public class DoRegister extends HttpServlet {
 
 //            int sql = st.executeUpdate("insert into user(firstname,lastname,phone,email,active,pass)values('" + firstName + "','" + lastName + "','" + tel + "','" + email + "','0','" + hash + "')");
 //            response.getWriter().println(sql);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }

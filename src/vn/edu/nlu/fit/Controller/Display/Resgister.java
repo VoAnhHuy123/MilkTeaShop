@@ -21,8 +21,6 @@ public class Resgister extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            Statement s= ConnectionDB.connect();
-            Statement s1= ConnectionDB.connect();
 
             String sql = "SELECT * FROM type WHERE active=1";
             String sql1 = "SELECT name,type_id,image FROM product WHERE active=1";
@@ -37,8 +35,6 @@ public class Resgister extends HttpServlet {
             request.setAttribute("b", sr2);
             request.getRequestDispatcher("Register.jsp").forward(request, response);
 //            request.getRequestDispatcher("Listproduct.jsp").forward(request, response);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }
