@@ -99,8 +99,8 @@ public class AddToCart extends HttpServlet {
 //            request.setAttribute("milktea", milkTea);
 
 
-            response.setContentType("application/json");
-            response.getWriter().write(jsonPro);
+//            response.setContentType("application/json");
+            response.getWriter().write("ditme");
 
 
         } catch (SQLException | ClassNotFoundException e) {

@@ -61,8 +61,9 @@
     <!-- Codezeel www.codezeel.com - End -->
 
     <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
-</head>
+    <script src="js/ajax.js"></script>
 
+</head>
 
 <body class="common-home layout-1">
 <% ResultSet rs = (ResultSet) request.getAttribute("a"); %>
@@ -271,7 +272,7 @@
                                                             title="Add to Compare " onclick="compare.add('48 ');">
                                                         <i class="fa fa-exchange"></i></button>
                                                     <button type="button" class="addtocart" data-toggle="tooltip"
-                                                            title="Add to Cart " onclick="cart.add('48 ');"><span>Add to Cart</span>
+                                                            title="Add to Cart " onclick="addToCart(1)"><span>Add to Cart</span>
                                                     </button>
                                                 </div>
                                             </div>
