@@ -65,6 +65,18 @@
     <!-- Codezeel www.codezeel.com - End -->
 
     <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
+    <%--    <script src="Javascript/Paging.js" type="text/javascript"></script>--%>
+    <%--    <script src="Javascript/Pagination.js" type="text/javascript"></script>--%>
+    <style>
+        .pagination {
+            display: flex;
+            display: -webkit-flex; /* Safari 8 */
+            flex-wrap: wrap;
+            -webkit-flex-wrap: wrap; /* Safari 8 */
+            justify-content: center;
+            -webkit-justify-content: center;
+        }
+    </style>
 </head>
 
 
@@ -227,10 +239,10 @@
         </aside>
 
         <div id="content" class="col-sm-9">
-            <h1 class="page-title">Product</h1>
+            <%--            <h1 class="page-title">Product</h1>--%>
             <div class="row category_thumb">
-                <div class="col-sm-2 category_img"><img src="image/cache/catalog/category-banner-1113x200.jpg"
-                                                        alt="Foods" title="Foods" class="img-thumbnail"/></div>
+                <%--                <div class="col-sm-2 category_img"><img src="image/cache/catalog/category-banner-1113x200.jpg"--%>
+                <%--                                                        alt="Foods" title="Foods" class="img-thumbnail"/></div>--%>
             </div>
             <div class="category_filter">
                 <div class="col-md-4 btn-list-grid">
@@ -334,7 +346,7 @@
                                 </div>
 
 
-                                <div class="percentsaving">7% off</div>
+                                <div class="percentsaving"><%= ss.getString("sale_percent")%> off</div>
 
                                 <div class="button-group">
                                     <button type="button" class="wishlist" data-toggle="tooltip"
@@ -342,7 +354,8 @@
                                             class="fa fa-heart"></i></button>
                                     <div class="quickview-button" data-toggle="tooltip" title="Quick view"><a
                                             class="quickbox"
-                                            href="index3e43.html?route=product/quick_view&amp;path=20&amp;product_id=32">
+                                    <%--                                            ////--%>
+                                            href="">
                                         <i class="fa fa-eye" aria-hidden="true"></i></a></div>
                                     <button type="button" class="compare" data-toggle="tooltip" title="Add to Compare"
                                             onclick="compare.add('32');"><i class="fa fa-exchange"></i></button>
@@ -350,10 +363,8 @@
                                             onclick="cart.add('32 ');"><span>Add to Cart</span></button>
                                 </div>
                             </div>
-
                             <div class="product-details">
                                 <div class="caption">
-
                                     <div class="rating">
                                         <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i
                                                 class="fa fa-star-o fa-stack-2x"></i></span>
@@ -366,11 +377,9 @@
                                         <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i
                                                 class="fa fa-star-o fa-stack-2x"></i></span>
                                     </div>
-
                                     <h4>
                                         <a href="index5f5b.html?route=product/product&amp;path=20&amp;product_id=32"><%= ss.getString("name")%>
                                         </a></h4>
-
                                     <div class="rating list-rate">
                                         <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i
                                                 class="fa fa-star-o fa-stack-2x"></i></span>
@@ -385,8 +394,10 @@
                                     </div>
 
                                     <p class="price">
-                                        <span class="price-new"><%= ss.getString("price")%></span> <span
-                                            class="price-old">$118.40</span>
+                                        <span class="price-new"><%= ss.getString("sale_price")%><span
+                                                style="font-size: 10px"> VND</span></span> <span
+                                            class="price-old"><%= ss.getString("price")%><span
+                                            style="font-size: 10px"> VND</span></span>
                                         <span class="price-tax">Ex Tax: $90.00</span>
                                     </p>
 
@@ -406,10 +417,10 @@
             <div class="pagination-wrapper">
                 <div class="col-sm-6 text-left page-link">
                     <ul class="pagination">
-                        <li class="active"><span>1</span></li>
-                        <li><a href="indexf341.html?route=product/category&amp;path=20&amp;page=2">2</a></li>
-                        <li><a href="indexf341.html?route=product/category&amp;path=20&amp;page=2">&gt;</a></li>
-                        <li><a href="indexf341.html?route=product/category&amp;path=20&amp;page=2">&gt;|</a></li>
+                        <%--                        <li class="active"><span>1</span></li>--%>
+                        <%--                        <li><a href="indexf341.html?route=product/category&amp;path=20&amp;page=2">2</a></li>--%>
+                        <%--                        <li><a href="indexf341.html?route=product/category&amp;path=20&amp;page=2">&gt;</a></li>--%>
+                        <%--                        <li><a href="indexf341.html?route=product/category&amp;path=20&amp;page=2">&gt;|</a></li>--%>
                     </ul>
                 </div>
                 <div class="col-sm-6 text-right page-result">Showing 1 to 12 of 14 (2 Pages)</div>
@@ -436,9 +447,9 @@
 
     }
 
+    var container = document.getElementsByClassName("btn-group");
+    var btns = container.getElementsByClassName("btn-default");
     for (i = 0; i < btns.length; i++) {
-        var container = document.getElementsByClassName("btn-group");
-        var btns = container.getElementsByClassName("btn");
         btns[i].addEventListener("click", function () {
             var current = document.getElementsByClassName("active");
             pokcurrent[0].className = current[0].className.replace(" active", "-+");
@@ -449,11 +460,5 @@
 
 </script>
 
-<!--
-OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
-Please donate via PayPal to donate@opencart.com
-//-->
-<!-- Theme created by Welford Media for OpenCart 2.0 www.welfordmedia.co.uk -->
 </body>
-<!-- Mirrored from demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=product/category&path=20 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Oct 2019 15:33:58 GMT -->
 </html>

@@ -142,7 +142,7 @@
                                 <% while (rs.next()) {
                                 %>
                                 <li class="top_level main"><a
-                                        href="<%= Util.fullPath("ListProduct?type=" + rs.getInt("id"))%>"><%= rs.getString("name")%>
+                                        href="<%= Util.fullPath("ListProduct?type=" + rs.getString("id"))%>"><%= rs.getString("name")%>
                                 </a></li>
                                 <% } %>
                             </ul>
@@ -150,39 +150,39 @@
                     </div>
 
 
-<%--                    <div id="links_block_top" class="block links">--%>
+                    <%--                    <div id="links_block_top" class="block links">--%>
 
-<%--                        <ul id="cz_toplink" class="header_blocklink">--%>
-<%--                            <li class="toplink-title">--%>
-<%--                                Quick link--%>
-<%--                                :--%>
-<%--                            </li>--%>
+                    <%--                        <ul id="cz_toplink" class="header_blocklink">--%>
+                    <%--                            <li class="toplink-title">--%>
+                    <%--                                Quick link--%>
+                    <%--                                :--%>
+                    <%--                            </li>--%>
 
-<%--                            <li>--%>
-<%--                                <a href="#" title="Our stores">Our stores</a>--%>
-<%--                            </li>--%>
+                    <%--                            <li>--%>
+                    <%--                                <a href="#" title="Our stores">Our stores</a>--%>
+                    <%--                            </li>--%>
 
-<%--                            <li>--%>
-<%--                                <a href="#" title="Transfer">Transfer</a>--%>
-<%--                            </li>--%>
+                    <%--                            <li>--%>
+                    <%--                                <a href="#" title="Transfer">Transfer</a>--%>
+                    <%--                            </li>--%>
 
-<%--                            <li>--%>
-<%--                                <a href="#" title="About us">About us</a>--%>
-<%--                            </li>--%>
+                    <%--                            <li>--%>
+                    <%--                                <a href="#" title="About us">About us</a>--%>
+                    <%--                            </li>--%>
 
-<%--                            <li>--%>
-<%--                                <a href="#" title="Sitemap">Sitemap</a>--%>
-<%--                            </li>--%>
+                    <%--                            <li>--%>
+                    <%--                                <a href="#" title="Sitemap">Sitemap</a>--%>
+                    <%--                            </li>--%>
 
-<%--                            <li>--%>
-<%--                                <a href="#" title="Chiropractic ">Chiropractic </a>--%>
-<%--                            </li>--%>
+                    <%--                            <li>--%>
+                    <%--                                <a href="#" title="Chiropractic ">Chiropractic </a>--%>
+                    <%--                            </li>--%>
 
-<%--                            <li>--%>
-<%--                                <a href="#" title="Delivery Information">Delivery Information</a>--%>
-<%--                            </li>--%>
-<%--                        </ul>--%>
-<%--                    </div>--%>
+                    <%--                            <li>--%>
+                    <%--                                <a href="#" title="Delivery Information">Delivery Information</a>--%>
+                    <%--                            </li>--%>
+                    <%--                        </ul>--%>
+                    <%--                    </div>--%>
 
                     <div class="header-cart">
                         <div id="cart" class="btn-group btn-block">
@@ -288,6 +288,7 @@
                                 <span class="input-group-btn">
 			<button type="button" class="btn btn-default btn-lg">Search<i class="fa fa-search"></i></button>
 			</span>
+
                             </div>
                         </div>
                     </div>

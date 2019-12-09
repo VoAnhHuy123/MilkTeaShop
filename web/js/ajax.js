@@ -24,8 +24,8 @@ function addToCart(id) {
 
                alert(abc);
 
-            var json = JSON.parse(abc);
-            alert(json.name);
+            // var json = JSON.parse(abc);
+            // alert(json.name);
             add += " <li>\n" +
                 "                                <table class=\"table table-striped\">\n" +
                 "                                    <tr>\n" +

@@ -20,16 +20,16 @@ public class Login extends HttpServlet {
 
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PreparedStatement qr=null;
-        PreparedStatement qr1=null;
+        PreparedStatement qr = null;
+        PreparedStatement qr1 = null;
         try {
 
 
             String sql = "SELECT * FROM type WHERE active=1";
-            String sql1 = "SELECT name,type_id,image FROM product WHERE active=1";
+            String sql1 = "SELECT * FROM product WHERE active=1";
 //            String sqll = "select name "
-             qr = con.prepareStatement(sql);
-             qr1 = con.prepareStatement(sql1);
+            qr = ConnectionDB.connect(sql);
+            qr1 = ConnectionDB.connect(sql1);
 
 
             ResultSet sr1 = qr.executeQuery();
@@ -38,13 +38,10 @@ public class Login extends HttpServlet {
             request.setAttribute("b", sr2);
             request.getRequestDispatcher("Login.jsp").forward(request, response);
 //            request.getRequestDispatcher("Listproduct.jsp").forward(request, response);
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
-
-
-
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

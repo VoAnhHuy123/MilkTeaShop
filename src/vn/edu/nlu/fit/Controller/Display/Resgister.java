@@ -23,10 +23,10 @@ public class Resgister extends HttpServlet {
         try {
 
             String sql = "SELECT * FROM type WHERE active=1";
-            String sql1 = "SELECT name,type_id,image FROM product WHERE active=1";
+            String sql1 = "SELECT * FROM product WHERE active=1";
 //            String sqll = "select name "
-            PreparedStatement qr = con.prepareStatement(sql);
-            PreparedStatement qr1 = con.prepareStatement(sql1);
+            PreparedStatement qr = ConnectionDB.connect(sql);
+            PreparedStatement qr1 = ConnectionDB.connect(sql1);
 
 
             ResultSet sr1 = qr.executeQuery();
@@ -35,7 +35,7 @@ public class Resgister extends HttpServlet {
             request.setAttribute("b", sr2);
             request.getRequestDispatcher("Register.jsp").forward(request, response);
 //            request.getRequestDispatcher("Listproduct.jsp").forward(request, response);
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
