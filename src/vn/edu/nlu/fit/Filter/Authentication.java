@@ -1,6 +1,6 @@
 package vn.edu.nlu.fit.Filter;
 
-import com.sun.deploy.net.HttpRequest;
+//import com.sun.deploy.net.HttpRequest;
 import org.apache.catalina.Session;
 import vn.edu.nlu.fit.Controller.Display.Login;
 

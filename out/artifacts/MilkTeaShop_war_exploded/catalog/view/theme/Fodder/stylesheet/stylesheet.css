@@ -1705,8 +1705,8 @@ footer a:hover, footer a:focus {
     border-right: 1px solid #393939;
     position: absolute;
     left: 0px;
-    height: 247px;
-    top: -20px;
+    height: 210px;
+    top: 0px;
 }
 
 #footer .column.contact-block {
@@ -1945,8 +1945,8 @@ footer h5,
     border-right: 1px solid #393939;
     position: absolute;
     right: 20px;
-    height: 247px;
-    top: -20px;
+    height: 210px;
+    top: 0px;
 }
 
 .footer-blocks #czfootercmsblock .service-area {
@@ -2219,8 +2219,8 @@ footer h5,
 }
 
 .bottomfooter .container .footer-inner {
-    padding-top: 11px;
-    padding-bottom: 11px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .bottomfooter .container .row {
@@ -2238,7 +2238,7 @@ footer h5,
 }
 
 p.powered {
-    padding: 11px 0;
+    /*padding: 11px 0;*/
     margin: 0;
     text-align: center;
 }
@@ -4422,8 +4422,8 @@ h2.price {
 .category_filter {
     border: none;
     display: inline-block;
-    margin: 10px 0 10px;
-    padding: 0 0 10px;
+    /*margin: 10px 0 10px;*/
+    /*padding: 0 0 10px;*/
     width: 100%;
     background: none;
     border-bottom: 1px solid #e5e5e5;
@@ -4543,7 +4543,7 @@ h2.price {
 .main-slider {
     position: relative;
     width: 100%;
-    padding: 30px 0 0;
+    padding: 0px 0 0;
 }
 
 .main-slider .swiper-pagination {
@@ -5499,7 +5499,7 @@ div#product .form-group .hasCustomSelect {
 .footer-blocks {
     display: inline-block;
     width: 100%;
-    padding: 70px 0 67px;
+    padding: 15px 0 15px;
     position: relative;
 }
 
@@ -6905,7 +6905,7 @@ div#product .form-group .hasCustomSelect {
 
 #czcategorylistblock {
     clear: both;
-    padding: 70px 0 20px;
+    padding: 30px 0 20px;
     position: relative;
     overflow: hidden;
 }
@@ -6916,7 +6916,7 @@ div#product .form-group .hasCustomSelect {
     font: 700 26px/30px 'Sintony', sans-serif;
     text-transform: capitalize !important;
     letter-spacing: 0.2px;
-    margin-bottom: 50px;
+    /*margin-bottom: 50px;*/
 }
 
 #czcategorylistblock .czcategory_block.container {
@@ -7051,8 +7051,8 @@ div#product .form-group .hasCustomSelect {
 
 #czcategorylistblock .czcategory_block .owl-controls {
     position: absolute;
-    top: -40%;
-    right: 0;
+    top: -15%;
+    right: -18px;
     width: 75px;
 }
 
@@ -9655,5 +9655,5 @@ div#product .form-group .hasCustomSelect {
 .owl-controls .owl-page span:hover {
     background: #e49f02;
 }
-
+d
 

@@ -1,86 +1,6 @@
 ﻿
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <footer>
-    <div class="footerbefore">
-        <div class="container">
-            <?php echo $footerbefore; ?>
-            <script>
-                function subscribe()
-                {
-                    var emailpattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-                    var email = $('#txtemail').val();
-                    if(email != "")
-                    {
-                        if(!emailpattern.test(email))
-                        {
-                            $('.text-danger').remove();
-                            var str = '<span class="error">Invalid Email</span>';
-                            $('#txtemail').after('<div class="text-danger">Invalid Email</div>');
-
-                            return false;
-                        }
-                        else
-                        {
-                            $.ajax({
-                                url: 'index.php?route=extension/module/newsletters/news',
-                                type: 'post',
-                                data: 'email=' + $('#txtemail').val(),
-                                dataType: 'json',
-
-
-                                success: function(json) {
-
-                                    $('.text-danger').remove();
-                                    $('#txtemail').after('<div class="text-danger">' + json.message + '</div>');
-
-                                }
-
-                            });
-                            return false;
-                        }
-                    }
-                    else
-                    {
-                        $('.text-danger').remove();
-                        $('#txtemail').after('<div class="text-danger">Email Is Require</div>');
-                        $(email).focus();
-
-                        return false;
-                    }
-                }
-            </script>
-
-            <div class="newsletter">
-                <div class="news-description">
-                    <div class="news-title">Sign Up For Newsletter</div>
-                    <div class="news-subtitle">...and receive $20 coupon for first shopping</div>
-                </div>
-                <div class="newsright">
-                    <form action="#" method="post">
-                        <div class="form-group required">
-                            <label class="col-sm-2 control-label" for="input-firstname">Email</label>
-                            <div class="input-news">
-                                <input type="email" name="txtemail" id="txtemail" value="" placeholder="Enter Your Email Address" class="form-control input-lg"  />
-                            </div>
-                            <div class="subscribe-btn">
-                                <button type="submit" class="btn btn-default btn-lg" onclick="return subscribe();">Subscribe</i></button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="social-block">
-                <ul>
-                    <li class="facebook"><a href="#"><span>Facebook</span></a></li>
-                    <li class="twitter"><a href="#"><span>Twitter</span></a></li>
-                    <li class="youtube"><a href="#"><span>YouTube</span></a></li>
-                    <li class="googleplus"><a href="#"><span>Google +</span></a></li>
-                    <li class="instagram"><a href="#"><span>Instagram</span></a></li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
     <div id="footer" class="container">
 
         <div class="row">
@@ -96,12 +16,6 @@
                             </div>
                             <div class="footerdiv">
                                 <div class="footer-title">(+01) 123 7589 23</div>
-                                <div class="footerdesc">27 Lorem Ipsum, Dummy, Simply Consicuis 85fdg , Amet</div>
-                                <div class="view-more"><a href="#">Find is On Map</a></div>
-                                <div class="footer-logo">
-                                    <h3 class="h3">Secured by:</h3>
-                                    <div class="footercms-inner"><a href="#" class="footercms"><img src="image/catalog/cms-footer-1.png" alt="cms-footer1" class="footercms-image1"></a> <a href="#" class="footercms"><img src="image/catalog/cms-footer-2.png" alt="cms-footer2" class="footercms-image2"></a></div>
-                                </div>
                             </div>
                         </div>
                     </div>

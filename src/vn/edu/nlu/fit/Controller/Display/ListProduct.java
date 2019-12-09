@@ -26,24 +26,22 @@ public class ListProduct extends HttpServlet {
         String type = request.getParameter("type");
         response.getWriter().println(type);
         try {
-
             String sql = "SELECT * FROM type WHERE active=1";
 
-            String sql1 = "SELECT name,type_id,price,image FROM product WHERE active=1";
+            String sql1 = "SELECT * FROM product WHERE active=1";
+
             PreparedStatement s = ConnectionDB.connect(sql);
-            ResultSet sr = s.executeQuery();
-
-
-            if (type != null) sql1 += " AND type_id =?";
             PreparedStatement s1 = ConnectionDB.connect(sql1);
-            s1.setString(1, type);
-            response.getWriter().println(sql1);
-            ResultSet sr1 = s1.executeQuery();
 
+            ResultSet sr = s.executeQuery();
+            if (type != null) sql1 += " AND type_id =" + "'" + type + "'";
+            response.getWriter().println(sql1);
+
+            ResultSet sr1 = s1.executeQuery(sql1);
             response.getWriter().println("d");
             request.setAttribute("a", sr);
             request.setAttribute("b", sr1);
-//            response.getWriter().println("hagdsjssfehsabfhj");
+            response.getWriter().println("hagdsjssfehsabfhj");
             request.getRequestDispatcher("Listproduct.jsp").forward(request, response);
 
         } catch (ClassNotFoundException e) {
@@ -54,4 +52,5 @@ public class ListProduct extends HttpServlet {
 
 
     }
+
 }

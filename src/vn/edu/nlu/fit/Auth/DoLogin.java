@@ -53,7 +53,7 @@ public class DoLogin extends HttpServlet {
                 ResultSet rs2 = pre2.executeQuery();
                 while (rs2.next()){
                     ShoppingCart shoppingCart = new ShoppingCart();
-                    shoppingCart.setListItem(rs2.get);
+//                    shoppingCart.setListItem(rs2.get);
                 }
                 //end sql
                 HttpSession session =  request.getSession();
