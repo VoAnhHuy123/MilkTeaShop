@@ -1,5 +1,11 @@
 <%@ page import="vn.edu.nlu.fit.util.Util" %>
+<%@ page import="vn.edu.nlu.fit.Model.User" %>
+<%@ page import="vn.edu.nlu.fit.Model.ShoppingCart" %>
+<%@ page import="vn.edu.nlu.fit.Model.Item" %>
+<%@ page import="java.util.List" %>
+<%@ page import="vn.edu.nlu.fit.Model.Topping" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <nav id="top" class="nav-top">
     <div class="container">
         <div id="cznavcmsblock">
@@ -189,11 +195,93 @@
                             <span class="cart_heading" data-toggle="dropdown">Your Bag</span>
                             <button type="button" data-toggle="dropdown" data-loading-text="Loading..."
                                     class="btn btn-inverse btn-block btn-lg dropdown-toggle"><i
-                                    class="fa fa-shopping-cart"></i> <span id="cart-total">0</span></button>
+                                    class="fa fa-shopping-cart"></i>
+                                <% HttpSession sess1 = (HttpSession) request.getSession();
+                                    if (sess1.getAttribute("user") == null) {
+                                %>
+                                <span id="cart-total">0</span>
+                                <%
+                                } else {
+                                    User user1 = (User) sess1.getAttribute("user");
+                                    ShoppingCart shoppingCart1 = user1.getShoppingCart();
+                                    List<Item> itemList1 = shoppingCart1.getListItem();
+                                    int count=0;
+                                    for (Item item: itemList1) {
+                                        count+=item.getQuantity();
+                                    }
+
+                                %>
+                                <span id="cart-total"><%=count%></span>
+                                <%}%>
+                            </button>
                             <ul class="dropdown-menu pull-right cart-menu">
+                                <% HttpSession sess = (HttpSession) request.getSession();
+                                    if (sess.getAttribute("user") == null) {
+                                %>
                                 <li>
                                     <p class="text-center">Your shopping cart is empty!</p>
                                 </li>
+                                <%
+                                } else {
+                                    User user = (User) sess.getAttribute("user");
+                                    ShoppingCart shoppingCart = user.getShoppingCart();
+                                    List<Item> itemList = shoppingCart.getListItem();
+
+                                %>
+                                <li>
+                                    <table class="table table-striped">
+                                        <% for (Item item : itemList) {%>
+                                        <tr>
+                                            <td class="text-center"><a
+                                                    href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=product/product&amp;product_id=47"><img
+                                                    style="height: 70px; width: 70px"
+                                                    src="<%=item.getImage()%>"
+                                                    alt="Accusantium Doloremque" title="Accusantium Doloremque"
+                                                    class="img-thumbnail"/></a></td>
+                                            <td class="text-left"><a style="font-size: 12px; font-weight: 600;"
+                                                    href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=product/product&amp;product_id=47">
+                                                <%= item.getName()%> (<%=item.getSize()%>)
+                                            </a> <br/>
+                                                <%if (item.getToppingList()!=null){
+                                                    for (Topping topping: item.getToppingList()){
+                                                %>
+                                                <small style="font-size: 10px">+ <%=topping.getName()%></small> <br>
+                                                <%}}%>
+                                            </td>
+                                            <td class="text-right" style="font-size: 12px;">x <%=item.getQuantity()%></td>
+                                            <td class="text-right" style="font-size: 12px;"><%=item.getPrice()%>
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="button" onclick="deleteFromCart(<%=itemList.indexOf(item)%>)" title="Remove"
+                                                        class="btn btn-danger btn-xs"><i class="fa fa-times"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <%}%>
+                                    </table>
+                                </li>
+                                <li>
+                                    <div>
+                                        <table class="table table-bordered">
+                                            <tr>
+                                                <td class="text-right"><strong>Sub-Total</strong></td>
+                                                <td class="text-right">$585.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right"><strong>Total</strong></td>
+                                                <td class="text-right"><%=shoppingCart.total()%></td>
+                                            </tr>
+                                        </table>
+                                        <p class="text-right button-container"><a
+                                                href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=checkout/cart"
+                                                class="addtocart btn btn-primary"><strong> View Cart</strong></a>&nbsp;&nbsp;&nbsp;<a
+                                                href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=checkout/checkout"
+                                                class="checkout btn btn-primary"><strong> Checkout</strong></a></p>
+                                    </div>
+                                </li>
+                                <%
+                                    }
+                                %>
                             </ul>
                         </div>
                     </div>

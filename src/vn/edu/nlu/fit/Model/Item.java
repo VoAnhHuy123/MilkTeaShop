@@ -1,19 +1,44 @@
 package vn.edu.nlu.fit.Model;
 
+import javax.swing.*;
+import java.util.List;
+
 public class Item {
     int id;
-    Product product;
+    int productId;
+    String name;
+    String image;
+    double price;
     int quantity;
-    long price;
+    String size;
+    List<Topping> toppingList;
 
-    public Item(int id, Product product, int quantity, long price) {
+
+    public Item(int id,int productId, String name, String image, double price, int quantity, List<Topping> toppingList, String size) {
         this.id = id;
-        this.product = product;
-        this.quantity = quantity;
+        this.productId=productId;
+        this.name = name;
+        this.image = image;
         this.price = price;
+        this.quantity = quantity;
+        this.toppingList = toppingList;
+        this.size = size;
     }
 
-    public Item() {
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public int getProductId() {
+        return productId;
+    }
+
+    public void setProductId(int productId) {
+        this.productId = productId;
     }
 
     public int getId() {
@@ -24,12 +49,31 @@ public class Item {
         this.id = id;
     }
 
-    public Product getProduct() {
-        return product;
+    public Item() {
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public int getQuantity() {
@@ -40,11 +84,11 @@ public class Item {
         this.quantity = quantity;
     }
 
-    public long getPrice() {
-        return price;
+    public List<Topping> getToppingList() {
+        return toppingList;
     }
 
-    public void setPrice() {
-        this.price = (long) (this.quantity*this.product.getPrice());
+    public void setToppingList(List<Topping> toppingList) {
+        this.toppingList = toppingList;
     }
 }

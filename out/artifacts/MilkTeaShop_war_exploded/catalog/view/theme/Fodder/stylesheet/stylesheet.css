@@ -718,7 +718,7 @@ header #cart li a, header #cart li {
 
 #cart .dropdown-menu {
     width: 330px;
-    padding: 10px;
+    /*padding: 10px;*/
     overflow: hidden;
     display: none;
     margin-top: 0px;

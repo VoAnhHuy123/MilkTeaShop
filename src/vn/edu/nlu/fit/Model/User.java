@@ -8,18 +8,24 @@ public class User {
     String phone;
     ShoppingCart shoppingCart;
 
-    public User(int id, String first_name, String last_name, String email, String phone) {
+    public User(int id, String first_name, String last_name, String email, String phone, ShoppingCart shoppingCart) {
         this.id = id;
         this.first_name = first_name;
         this.last_name = last_name;
         this.email = email;
         this.phone = phone;
+        this.shoppingCart = shoppingCart;
     }
 
     public User() {
 
     }
-
+public void setShoppingCart(ShoppingCart shoppingCart){
+        this.shoppingCart=shoppingCart;
+}
+public ShoppingCart getShoppingCart(){
+        return this.shoppingCart;
+}
     public int getId() {
         return id;
     }

@@ -1,53 +1,112 @@
 package vn.edu.nlu.fit.Model;
 
+import com.sun.corba.se.impl.oa.toa.TOA;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.ThreadPoolExecutor;
 
 public class ShoppingCart {
-    int id;
-    List<Item> listItem;
-    int user_id;
-    int status;
 
-    public ShoppingCart(int id, List<Item> listItem, int user_id, int status) {
-        this.id = id;
-        this.listItem = listItem;
-        this.user_id = user_id;
-        this.status = status;
-    }
+    List<Item> listItem;
+
 
     public ShoppingCart() {
+
+        this.listItem = new ArrayList<>();
+
+    }
+    public double total() {
+        double total = 0;
+        for (Item item : listItem) {
+            total += item.getPrice();
+        }
+        return total;
+    }
+    public void updateSize(int index, int quantity){
+        for (Item item: listItem) {
+            if (listItem.indexOf(item)==index){
+                item.setQuantity(quantity);
+
+            }
+        }
     }
 
-    public int getId() {
-        return id;
+    public Item isExist(Item item) {
+
+       a:for (Item items : listItem) {
+           ArrayList<Topping> a = (ArrayList<Topping>) items.getToppingList();
+           ArrayList<Topping> b = (ArrayList<Topping>) item.getToppingList();
+
+            if ((items.getProductId() == item.getProductId()) && (items.getSize().equals(item.getSize()))) {
+                if (a == null && b == null){
+                    return items;
+                }
+
+                if((a == null && b != null)
+                        || a != null && b == null
+                        || a.size() != b.size()){
+                  continue a;
+                }
+
+                //to avoid messing the order of the lists we will use a copy
+                //as noted in comments by A. R. S.
+
+
+                if (a.containsAll(b) && b.containsAll(a)){
+                    return  items;
+                }
+
+            }
+        }
+        return null;
     }
 
-    public void setId(int id) {
-        this.id = id;
+
+
+    public void removeItem(int index) {
+        Iterator<Item> iteratorItem = listItem.iterator();
+        int a=-1;
+        while (iteratorItem.hasNext()){
+            a++;
+            Item item = iteratorItem.next();
+            if (index==a){
+                iteratorItem.remove();
+            }
+        }
     }
 
     public List<Item> getListItem() {
         return listItem;
     }
 
-    public void setListItem(List<Item> listItem) {
-        this.listItem = listItem;
+    public void setListItem(Item item) {
+        this.listItem.add(item);
     }
 
+    public static void main(String[] args) {
+        ShoppingCart abc = new ShoppingCart();
+        Topping top = new Topping("ga", 455);
+        Topping top1 = new Topping("ga1", 455);
+        Topping top2 = new Topping("ga4", 455);
+        ArrayList<Topping> g = new ArrayList<Topping>();
+        ArrayList<Topping> g1 = new ArrayList<Topping>();
+        ArrayList<Topping> g12 = new ArrayList<Topping>();
+        g.add(top);
+//        g.add(top1);
 
-    public int getUser_id() {
-        return user_id;
-    }
+//        g1.add(top1);
+//        g1.add(top);
+        g12.add(top2);
+//        abc.setListItem(new Item(1, 2, "huy", "affa", 45, 2, null))
+        Item test = new Item();
+//        test.setPrice(5656);
+        test.setToppingList(g12);
+        test.setProductId(2);
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
-    }
 
-    public int getStatus() {
-        return status;
-    }
-
-    public void setStatus(int status) {
-        this.status = status;
+        System.out.println(abc.isExist(test)!=null);
     }
 }
