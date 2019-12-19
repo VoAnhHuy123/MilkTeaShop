@@ -3,7 +3,7 @@ package vn.edu.nlu.fit.Controller.Display;
 import com.google.gson.Gson;
 import vn.edu.nlu.fit.Model.User;
 
-import javax.jws.soap.SOAPBinding;
+//import javax.jws.soap.SOAPBinding;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
