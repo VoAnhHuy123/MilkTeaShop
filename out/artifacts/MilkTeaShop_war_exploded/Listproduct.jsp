@@ -246,7 +246,7 @@
             </div>
             <div class="category_filter">
                 <div class="col-md-4 btn-list-grid">
-                    <div class="btn-group">
+                    <div class="btn-group" id="btn-group">
                         <button type="button" id="grid-view" class="btn btn-default grid active" data-toggle="tooltip"
                                 title="Grid" onclick="gridView()"><i class="fa fa-th"></i></button>
                         <button type="button" id="list-view" class="btn btn-default list" data-toggle="tooltip"
@@ -327,14 +327,15 @@
             </div>
 
             <div class="row cat_prod">
-                <% ResultSet ss = (ResultSet) request.getAttribute("b");
+                <% ResultSet ss = (ResultSet) request.getAttribute("p");
                     while (ss.next()) {
                 %>
                 <div class="product-layout product-list col-xs-12">
                     <div class="product-block product-thumb">
                         <div class="product-block-inner">
                             <div class="image">
-                                <a href="index5f5b.html?route=product/product&amp;path=20&amp;product_id=32">
+<%--                                ///--%>
+                                <a href="<%=Util.fullPath("DetailProduct?id="+ss.getString("id"))%>">
                                     <img src="<%= ss.getString("image")%>" title="Reprehenderit Aliquam"
                                          alt="Reprehenderit Aliquam" class="img-responsive reg-image"/>
                                     <img class="img-responsive hover-image" src="<%= ss.getString("image")%>"
@@ -417,10 +418,22 @@
             <div class="pagination-wrapper">
                 <div class="col-sm-6 text-left page-link">
                     <ul class="pagination">
-                        <%--                        <li class="active"><span>1</span></li>--%>
-                        <%--                        <li><a href="indexf341.html?route=product/category&amp;path=20&amp;page=2">2</a></li>--%>
-                        <%--                        <li><a href="indexf341.html?route=product/category&amp;path=20&amp;page=2">&gt;</a></li>--%>
-                        <%--                        <li><a href="indexf341.html?route=product/category&amp;path=20&amp;page=2">&gt;|</a></li>--%>
+                        <%
+                            int type = (int) request.getAttribute("type");
+                        %>
+                        <li class="<%=((1+"").equals(request.getParameter("page"))||(request.getAttribute("type").equals(type+"")))?"active":""%>">
+                            <a href="<%=Util.fullPath("ListProduct?type=" + type + "&page="+1)%>">1</a>
+                        </li>
+                        <%
+                            int sum = (int) request.getAttribute("sum");
+                            for (int i = 1; i < sum; i++) {
+                        %>
+                        <li class="<%=(i+1+"").equals(request.getParameter("page"))?"active":""%>"><a
+                                href="<%=Util.fullPath("ListProduct?type=" + type + "&page="+(i+1))%>"><%=(i + 1)%>
+                        </a></li>
+                        <%}%>
+                        <%--                        <li><a href="<%=Util.fullPath("ListProduct?type=" + type + "&page="+i++)%>">&gtz;</a></li>--%>
+                        <li><a href="<%=Util.fullPath("ListProduct?type=" + type + "&page="+sum)%>">&gt;|</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-6 text-right page-result">Showing 1 to 12 of 14 (2 Pages)</div>
@@ -447,12 +460,12 @@
 
     }
 
-    var container = document.getElementsByClassName("btn-group");
-    var btns = container.getElementsByClassName("btn-default");
+    var container = document.getElementById("btn-group");
+    var btns = container.getElementsByClassName("btn");
     for (i = 0; i < btns.length; i++) {
         btns[i].addEventListener("click", function () {
             var current = document.getElementsByClassName("active");
-            pokcurrent[0].className = current[0].className.replace(" active", "-+");
+            current[0].className = current[0].className.replace(" active", "-+");
             this.className += " active";
         });
     }
