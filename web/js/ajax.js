@@ -1,4 +1,3 @@
-var add = "";
 
 function addToCartSmall(id) {
     $.ajax({
@@ -6,8 +5,10 @@ function addToCartSmall(id) {
         type: 'GET',
         dataType: 'text',
         data: {id: id},
+        async: false,
+        responseType: "text",
         success: function (abc) {
-
+            alert(abc);
             var json = JSON.parse(abc);
             updateQuickCart(json);
         }
@@ -17,32 +18,62 @@ function addToCartSmall(id) {
 
 }
 
-function deleteFromCart(index) {
-    $.ajax({
+function deleteFromCart(id) {
+   var end =  $.ajax({
         url: 'http://localhost:8080/MilkTeaShop/DeleteFromCart',
         type: "GET",
         dataType: 'text',
-        cache: true,
+        // cache: true,
         // async:false,
         contentType: "application/json; charset=utf-8",
-        data: {index: index},
+        data: {id: id},
         success: function (abc1) {
+
 
             if (abc1!=null) {
                 var user = JSON.parse(abc1);
-                console.log(user.shoppingCart.listItem.length);
+                alert(abc1);
+                console.log(id);
+
                 updateQuickCart(user);
-                updateMainCart(user);
             }else {
-                console.log("false")
+
             }
-        },
+
+            },
 
     })
+    // end.abort();
+
+}
+function deleteFromCartMain(id) {
+   var end =  $.ajax({
+        url: 'http://localhost:8080/MilkTeaShop/DeleteFromCartMain',
+        type: "GET",
+        dataType: 'text',
+        // cache: true,
+        // async:false,
+        contentType: "application/json; charset=utf-8",
+        data: {id: id},
+        success: function (abc1) {
+
+
+            if (abc1!=null) {
+                var user = JSON.parse(abc1);
+                alert(abc1);
+                updateMainCart(user);
+
+            }else {
+                console.log(false)
+            }
+
+            }
+
+    })
+    // end.abort();
 
 }
 function updateMainCart(user) {
-    console.log('âfsda');
     var listItem = user.shoppingCart.listItem;
     result=" <h1 class=\"page-title\">Shopping Cart\n" +
         "            </h1>\n";
@@ -51,12 +82,12 @@ function updateMainCart(user) {
             "            <p>Your shopping cart is empty!</p>\n" +
             "            <div class=\"buttons clearfix\">\n" +
             "                <div class=\"pull-right\"><a\n" +
-            "                        href=\"https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=common/home\"\n" +
+            "                        href=\"\"\n" +
             "                        class=\"btn btn-primary\">Continue</a></div>\n" +
             "            </div>";
     }else{
 
-         result+=   "            <form action=\"https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=checkout/cart/edit\"\n" +
+         result+=   "            <form action=\"\"\n" +
             "                  method=\"post\">\n" +
             "                <div class=\"table-responsive\">\n" +
             "                    <table class=\"table table-bordered shopping-cart\">\n" +
@@ -100,8 +131,8 @@ function updateMainCart(user) {
                 "                                           size=\"1\" class=\"form-control\"/>\n" +
                 "                                    <span class=\"input-group-btn\">\n" +
                 "\n" +
-                "                  <button type=\"button\" data-toggle=\"tooltip\" title=\"\" class=\"btn btn-danger\"\n" +
-                "                          onclick=\""+deleteFromCart(i)+"\" data-original-title=\"Remove\" aria-describedby=\"tooltip974566\"><i\n" +
+                "                  <button type=\"button\"  title=\"\" class=\"btn btn-danger\"\n" +
+                "                          onclick=\""+deleteFromCartMain( listItem[i].id)+"\"><i\n" +
                 "                          class=\"fa fa-times-circle\"></i></button>\n" +
                 "                  </span>\n" +
                 "                                </div>\n" +
@@ -112,8 +143,6 @@ function updateMainCart(user) {
         }
     }
     $('#content').html(result);
-    console.log("abc")
-
 }
 
 function updateQuickCart(user) {
@@ -123,7 +152,7 @@ function updateQuickCart(user) {
     var total = 0;
     var count = 0;
     var i;
-    var index=-1;
+
     if (listItem.length==0){
         result+=
             "      <p class=\"text-center\">Your shopping cart is empty!</p>\n" +
@@ -132,7 +161,7 @@ function updateQuickCart(user) {
 
 
         for (i = 0; i < listItem.length; i++) {
-            index++;
+
             total += listItem[i].price;
             count += listItem[i].quantity;
             result +=
@@ -161,7 +190,7 @@ function updateQuickCart(user) {
                 "                                            <td class=\"text-right\" style=\"font-size: 12px;\">" + listItem[i].price + "\n" +
                 "                                            </td>\n" +
                 "                                            <td class=\"text-center\">\n" +
-                "                                                <button type=\"button\" onclick=\"deleteFromCart(" + index + ")\" title=\"Remove\"\n" +
+                "                                                <button type=\"button\" onclick=\"deleteFromCart(" + listItem[i].id + ")\" title=\"Remove\"\n" +
                 "                                                        class=\"btn btn-danger btn-xs\"><i class=\"fa fa-times\"></i>\n" +
                 "                                                </button>\n" +
                 "                                            </td>\n" +

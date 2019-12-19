@@ -252,7 +252,7 @@
                                             <td class="text-right" style="font-size: 12px;"><%=item.getPrice()%>
                                             </td>
                                             <td class="text-center">
-                                                <button type="button" onclick="deleteFromCart(<%=itemList.indexOf(item)%>)" title="Remove"
+                                                <button type="button" onclick="deleteFromCart(<%=item.getId()%>)" title="Remove"
                                                         class="btn btn-danger btn-xs"><i class="fa fa-times"></i>
                                                 </button>
                                             </td>

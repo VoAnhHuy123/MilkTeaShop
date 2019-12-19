@@ -18,6 +18,9 @@ public class ShoppingCart {
         this.listItem = new ArrayList<>();
 
     }
+    public int setNewId(){
+      return   listItem.get(listItem.size()-1).getId()+1;
+    }
     public double total() {
         double total = 0;
         for (Item item : listItem) {
@@ -33,6 +36,7 @@ public class ShoppingCart {
             }
         }
     }
+
 
     public Item isExist(Item item) {
 
@@ -66,13 +70,13 @@ public class ShoppingCart {
 
 
 
-    public void removeItem(int index) {
+    public void removeItem(int id) {
         Iterator<Item> iteratorItem = listItem.iterator();
-        int a=-1;
+
         while (iteratorItem.hasNext()){
-            a++;
+
             Item item = iteratorItem.next();
-            if (index==a){
+            if (id==item.getId()){
                 iteratorItem.remove();
             }
         }

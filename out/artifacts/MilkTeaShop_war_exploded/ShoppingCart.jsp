@@ -67,8 +67,6 @@
     <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
     <script src="js/ajax.js"></script>
 </head>
-
-
 <body class="checkout-cart layout-2 left-col">
 <% ResultSet rs = (ResultSet) request.getAttribute("a"); %>
 <%@ include file="Layout/header.jsp" %>
@@ -457,7 +455,7 @@
                                     <span class="input-group-btn">
 
                   <button type="button" data-toggle="tooltip" title="" class="btn btn-danger"
-                          onclick="deleteFromCart(<%=itemArrayList.indexOf(item)%>)" data-original-title="Remove" aria-describedby="tooltip974566"><i
+                          onclick="deleteFromCartMain(<%=item.getId()%>)" data-original-title="Remove" aria-describedby="tooltip974566"><i
                           class="fa fa-times-circle"></i></button>
                   </span>
                                 </div>

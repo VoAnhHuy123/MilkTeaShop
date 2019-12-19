@@ -3,7 +3,6 @@ package vn.edu.nlu.fit.Controller.Display;
 import com.google.gson.Gson;
 import vn.edu.nlu.fit.Model.User;
 
-import javax.jws.soap.SOAPBinding;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet("/DeleteFromCart")
-public class DeleteFromCart extends HttpServlet {
+@WebServlet("/DeleteFromCartMain")
+public class DeleteFromCartMain extends HttpServlet {
 
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

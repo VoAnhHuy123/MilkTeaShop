@@ -57,7 +57,6 @@ public class AddToCartSmall extends HttpServlet {
             item.setQuantity(quantity);
             item.setProductId(idInt);
             item.setSize("L");
-
 //            for (Item items:user.getShoppingCart().getListItem()) {
                 if (user.getShoppingCart().isExist(item)!=null){
                     quantity+=user.getShoppingCart().isExist(item).getQuantity();
@@ -71,9 +70,10 @@ public class AddToCartSmall extends HttpServlet {
 //                    rsEdit.first();
 //                    rsEdit.updateInt("quality", user.getShoppingCart().isExist(item).getQuantity());
 //                    rsEdit.updateDouble("price", user.getShoppingCart().isExist(item).getPrice());
+//                    rsEdit.updateString("size", user.getShoppingCart().isExist(item).getSize());
 //                    rsEdit.updateRow();
+//                    response.getWriter().println("safsaf");
                 }else{
-                    user.getShoppingCart().getListItem().add(item);
 //                    String splInsert = "SELECT * FROM shopping_cart";
 //                    psInsert = ConnectionDB.connect(splInsert);
 //                    ResultSet rsInsert = psInsert.executeQuery();
@@ -83,9 +83,13 @@ public class AddToCartSmall extends HttpServlet {
 //                    rsInsert.updateInt("product_id", item.getProductId());
 //                    rsInsert.updateInt("quality", item.getQuantity());
 //                    rsInsert.updateInt("active", 1);
+//                    rsInsert.updateString("size", item.getSize());
 //                    rsInsert.insertRow();
 //                    rsInsert.updateRow();
 //                    item.setId(rsInsert.getInt("id"));
+                    item.setId(user.getShoppingCart().setNewId());
+                    user.getShoppingCart().getListItem().add(item);
+
                 }
 
 //            }
@@ -95,8 +99,6 @@ public class AddToCartSmall extends HttpServlet {
             String jsonPro = gson.toJson(user);
             response.setContentType("application/json");
             response.getWriter().println(jsonPro);
-
-
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
