@@ -442,7 +442,7 @@
                                 } else {
                                     for (Topping topping : toppings) {
                                 %>
-                                <small>+ <%=topping.getName()%>: <%=topping.getPrice()%>đ</small><br>
+                                 <small>+ <%=topping.getName()%>: <%=topping.getPrice()%>đ</small><br>
                                 <%}%>
                                 <%}%>
 
@@ -454,9 +454,9 @@
                                            size="1" class="form-control"/>
                                     <span class="input-group-btn">
 
-                  <button type="button" data-toggle="tooltip" title="" class="btn btn-danger"
-                          onclick="deleteFromCartMain(<%=item.getId()%>)" data-original-title="Remove" aria-describedby="tooltip974566"><i
-                          class="fa fa-times-circle"></i></button>
+                  <a type="button" title="" class="btn btn-danger"
+                          onclick="deleteFromCart(<%=item.getId()%>)"><i
+                          class="fa fa-times-circle"></i></a>
                   </span>
                                 </div>
                             </td>

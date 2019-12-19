@@ -71,15 +71,12 @@ public class ShoppingCart {
 
 
     public void removeItem(int id) {
-        Iterator<Item> iteratorItem = listItem.iterator();
-
-        while (iteratorItem.hasNext()){
-
-            Item item = iteratorItem.next();
-            if (id==item.getId()){
-                iteratorItem.remove();
-            }
-        }
+       for (int i = 0 ; i<listItem.size(); i++){
+           if (listItem.get(i).getId() == id){
+               listItem.remove(listItem.get(i));
+               return;
+           }
+       }
     }
 
     public List<Item> getListItem() {

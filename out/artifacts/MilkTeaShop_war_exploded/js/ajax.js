@@ -28,13 +28,10 @@ function deleteFromCart(id) {
         contentType: "application/json; charset=utf-8",
         data: {id: id},
         success: function (abc1) {
-
-
             if (abc1!=null) {
                 var user = JSON.parse(abc1);
-                alert(abc1);
                 console.log(id);
-
+                updateMainCart(user);
                 updateQuickCart(user);
             }else {
 
@@ -46,33 +43,7 @@ function deleteFromCart(id) {
     // end.abort();
 
 }
-function deleteFromCartMain(id) {
-   var end =  $.ajax({
-        url: 'http://localhost:8080/MilkTeaShop/DeleteFromCartMain',
-        type: "GET",
-        dataType: 'text',
-        // cache: true,
-        // async:false,
-        contentType: "application/json; charset=utf-8",
-        data: {id: id},
-        success: function (abc1) {
 
-
-            if (abc1!=null) {
-                var user = JSON.parse(abc1);
-                alert(abc1);
-                updateMainCart(user);
-
-            }else {
-                console.log(false)
-            }
-
-            }
-
-    })
-    // end.abort();
-
-}
 function updateMainCart(user) {
     var listItem = user.shoppingCart.listItem;
     result=" <h1 class=\"page-title\">Shopping Cart\n" +
@@ -132,7 +103,7 @@ function updateMainCart(user) {
                 "                                    <span class=\"input-group-btn\">\n" +
                 "\n" +
                 "                  <button type=\"button\"  title=\"\" class=\"btn btn-danger\"\n" +
-                "                          onclick=\""+deleteFromCartMain( listItem[i].id)+"\"><i\n" +
+                "                          onclick=\"deleteFromCart("+ listItem[i].id+")\"><i\n" +
                 "                          class=\"fa fa-times-circle\"></i></button>\n" +
                 "                  </span>\n" +
                 "                                </div>\n" +

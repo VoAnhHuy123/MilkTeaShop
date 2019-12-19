@@ -286,6 +286,9 @@
                         </div>
                     </div>
                     <div class="dropdown myaccount">
+                    <% if (sess.getAttribute("user")==null){
+                     %>
+
                         <a href="indexe223.html?route=account/account" title="My Account" class="dropdown-toggle"
                            data-toggle="dropdown">
                             <span class="hidden-xs hidden-sm hidden-md">My Account</span><i class="fa fa-angle-down"
@@ -366,6 +369,72 @@
 
                             </li>
                         </ul>
+
+                    <%}else{%>
+                        <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/account" title="My Account" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="hidden-xs hidden-sm hidden-md">My Account</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-right myaccount-menu" style="display: block;">
+                            <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/account">My Account</a></li>
+                            <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/order">Order History</a></li>
+                            <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/transaction">Transactions</a></li>
+                            <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/download">Downloads</a></li>
+                            <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/logout">Logout</a></li>
+                            <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/wishlist" id="wishlist-total" title="Wish List (0)">Wish List (0)</a></li>
+                            <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=checkout/cart" title="Shopping Cart">Shopping Cart</a></li>
+                            <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=checkout/checkout" title="Checkout">Checkout</a></li>
+
+                            <li class="lang-curr">
+                                <div class="pull-left">
+                                    <form action="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=common/language/language" method="post" enctype="multipart/form-data" id="form-language">
+                                        <div class="btn-group">
+                                            <button class="btn btn-link">
+                                                Language
+
+                                                <img src="catalog/language/en-gb/en-gb.png" alt="English" title="English">
+                                            </button>
+                                            <ul class="language-menu">
+                                                <li>
+                                                    <button class="btn btn-link btn-block language-select" type="button" name="en-gb"><img src="catalog/language/en-gb/en-gb.png" alt="English" title="English"> English</button>
+                                                </li>
+                                                <li>
+                                                    <button class="btn btn-link btn-block language-select" type="button" name="ar"><img src="catalog/language/ar/ar.png" alt="Arabic" title="Arabic"> Arabic</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <input type="hidden" name="code" value="">
+                                        <input type="hidden" name="redirect" value="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/account">
+                                    </form>
+                                </div>
+
+                                <div class="pull-left">
+                                    <form action="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=common/currency/currency" method="post" enctype="multipart/form-data" id="form-currency">
+                                        <div class="btn-group">
+                                            <button class="btn btn-link">
+                                                Currency
+                                                <strong>$</strong>
+
+                                            </button>
+                                            <ul class="currency-menu">
+                                                <li>
+                                                    <button class="currency-select btn btn-link btn-block" type="button" name="EUR">€</button>
+                                                </li>
+                                                <li>
+                                                    <button class="currency-select btn btn-link btn-block" type="button" name="GBP">£</button>
+                                                </li>
+                                                <li>
+                                                    <button class="currency-select btn btn-link btn-block" type="button" name="USD">$</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <input type="hidden" name="code" value="">
+                                        <input type="hidden" name="redirect" value="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/account">
+                                    </form>
+                                </div>
+
+                            </li>
+                        </ul>
+
+                    <%}%>
                     </div>
                     <div id="search" class="input-group">
                         <span class="search_button"></span>
