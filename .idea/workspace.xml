@@ -8,18 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8e5fcb9d-ee25-4038-be42-644a316d4baf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Layout/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/ShoppingCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/ShoppingCart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/DeleteFromCartMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Model/ShoppingCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Model/ShoppingCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/js/ajax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/DeleteFromCartMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Model/ShoppingCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Model/ShoppingCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Controller/Display/DeleteFromCartMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Model/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Model/ShoppingCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Layout/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ShoppingCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/ShoppingCart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/ajax.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -309,6 +297,7 @@
       <workItem from="1576630737561" duration="12627000" />
       <workItem from="1576723272145" duration="2054000" />
       <workItem from="1576736962629" duration="11946000" />
+      <workItem from="1576764968469" duration="581000" />
     </task>
     <servers />
   </component>
