@@ -148,7 +148,7 @@
                                 <% while (rs.next()) {
                                 %>
                                 <li class="top_level main"><a
-                                        href="<%= Util.fullPath("ListProduct?type=" + rs.getString("id"))%>"><%= rs.getString("name")%>
+                                        href="<%= Util.fullPath("ListProduct?type=" + rs.getString("id")+ "&page="+1)%>"><%= rs.getString("name")%>
                                 </a></li>
                                 <% } %>
                             </ul>
@@ -205,9 +205,9 @@
                                     User user1 = (User) sess1.getAttribute("user");
                                     ShoppingCart shoppingCart1 = user1.getShoppingCart();
                                     List<Item> itemList1 = shoppingCart1.getListItem();
-                                    int count=0;
-                                    for (Item item: itemList1) {
-                                        count+=item.getQuantity();
+                                    int count = 0;
+                                    for (Item item : itemList1) {
+                                        count += item.getQuantity();
                                     }
 
                                 %>
@@ -226,8 +226,12 @@
                                     User user = (User) sess.getAttribute("user");
                                     ShoppingCart shoppingCart = user.getShoppingCart();
                                     List<Item> itemList = shoppingCart.getListItem();
-
+                                    if (itemList.size()==0){
                                 %>
+                                <li>
+                                    <p class="text-center">Your shopping cart is empty!</p>
+                                </li>
+                                <%}else{ %>
                                 <li>
                                     <table class="table table-striped">
                                         <% for (Item item : itemList) {%>
@@ -239,20 +243,27 @@
                                                     alt="Accusantium Doloremque" title="Accusantium Doloremque"
                                                     class="img-thumbnail"/></a></td>
                                             <td class="text-left"><a style="font-size: 12px; font-weight: 600;"
-                                                    href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=product/product&amp;product_id=47">
+                                                                     href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=product/product&amp;product_id=47">
                                                 <%= item.getName()%> (<%=item.getSize()%>)
                                             </a> <br/>
-                                                <%if (item.getToppingList()!=null){
-                                                    for (Topping topping: item.getToppingList()){
+                                                <%
+                                                    if (item.getToppingList() != null) {
+                                                        for (Topping topping : item.getToppingList()) {
                                                 %>
-                                                <small style="font-size: 10px">+ <%=topping.getName()%></small> <br>
-                                                <%}}%>
+                                                <small style="font-size: 10px">+ <%=topping.getName()%>
+                                                </small> <br>
+                                                <%
+                                                        }
+                                                    }
+                                                %>
                                             </td>
-                                            <td class="text-right" style="font-size: 12px;">x <%=item.getQuantity()%></td>
+                                            <td class="text-right" style="font-size: 12px;">x <%=item.getQuantity()%>
+                                            </td>
                                             <td class="text-right" style="font-size: 12px;"><%=item.getPrice()%>
                                             </td>
                                             <td class="text-center">
-                                                <button type="button" onclick="deleteFromCart(<%=item.getId()%>)" title="Remove"
+                                                <button type="button" onclick="deleteFromCart(<%=itemList.indexOf(item)%>)"
+                                                        title="Remove"
                                                         class="btn btn-danger btn-xs"><i class="fa fa-times"></i>
                                                 </button>
                                             </td>
@@ -269,7 +280,8 @@
                                             </tr>
                                             <tr>
                                                 <td class="text-right"><strong>Total</strong></td>
-                                                <td class="text-right"><%=shoppingCart.total()%></td>
+                                                <td class="text-right"><%=shoppingCart.total()%>
+                                                </td>
                                             </tr>
                                         </table>
                                         <p class="text-right button-container"><a
@@ -280,25 +292,26 @@
                                     </div>
                                 </li>
                                 <%
-                                    }
+                                    }}
                                 %>
                             </ul>
                         </div>
                     </div>
                     <div class="dropdown myaccount">
-                    <% if (sess.getAttribute("user")==null){
-                     %>
-
                         <a href="indexe223.html?route=account/account" title="My Account" class="dropdown-toggle"
                            data-toggle="dropdown">
                             <span class="hidden-xs hidden-sm hidden-md">My Account</span><i class="fa fa-angle-down"
                                                                                             aria-hidden="true"></i></a>
+                        <% if (sess.getAttribute("user") == null) {
+                        %>
+
+
                         <ul class="dropdown-menu dropdown-menu-right myaccount-menu">
                             <li><a href="index5502.html?route=account/register">Register</a></li>
-                            <li><a href="indexe223.html?route=account/login">Login</a></li>
+                            <li><a href="http://localhost:8080/MilkTeaShop/Login">Login</a></li>
                             <li><a href="indexe223.html?route=account/wishlist" id="wishlist-total"
                                    title="Wish List (0)">Wish List (0)</a></li>
-                            <li><a href="index630e.html?route=checkout/cart" title="Shopping Cart">Shopping Cart</a>
+                            <li><a href="http://localhost:8080/MilkTeaShop/ShoppingCart" title="Shopping Cart">Shopping Cart</a>
                             </li>
                             <li><a href="index630e.html?route=checkout/checkout" title="Checkout">Checkout</a></li>
 
@@ -370,44 +383,76 @@
                             </li>
                         </ul>
 
-                    <%}else{%>
-                        <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/account" title="My Account" class="dropdown-toggle" data-toggle="dropdown">
-                            <span class="hidden-xs hidden-sm hidden-md">My Account</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                        <ul class="dropdown-menu dropdown-menu-right myaccount-menu" style="display: block;">
-                            <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/account">My Account</a></li>
-                            <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/order">Order History</a></li>
-                            <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/transaction">Transactions</a></li>
-                            <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/download">Downloads</a></li>
-                            <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/logout">Logout</a></li>
-                            <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/wishlist" id="wishlist-total" title="Wish List (0)">Wish List (0)</a></li>
-                            <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=checkout/cart" title="Shopping Cart">Shopping Cart</a></li>
-                            <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=checkout/checkout" title="Checkout">Checkout</a></li>
+                        <%} else {
+                        %>
+                        <ul class="dropdown-menu dropdown-menu-right myaccount-menu">
+                            <li>
+                                <a href="http://localhost:8080/MilkTeaShop/MyAccount">My
+                                    Account</a></li>
+                            <li>
+                                <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/order">Order
+                                    History</a></li>
+                            <li>
+                                <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/transaction">Transactions</a>
+                            </li>
+                            <%
+                                User userr = (User) sess.getAttribute("user");
+                                if (userr.getAdmin()==1){
+
+                            %>
+                            <li>
+                                <a href="http://localhost:8080/MilkTeaShop/AllUser">Admin Page</a>
+                            </li>
+                            <%}%>
+
+                            <li>
+                                <a href="http://localhost:8080/MilkTeaShop/LogOut">Logout</a>
+                            </li>
+                            <li>
+                                <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/wishlist"
+                                   id="wishlist-total" title="Wish List (0)">Wish List (0)</a></li>
+                            <li>
+                                <a href="http://localhost:8080/MilkTeaShop/ShoppingCart"
+                                   title="Shopping Cart">Shopping Cart</a></li>
+                            <li>
+                                <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=checkout/checkout"
+                                   title="Checkout">Checkout</a></li>
 
                             <li class="lang-curr">
                                 <div class="pull-left">
-                                    <form action="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=common/language/language" method="post" enctype="multipart/form-data" id="form-language">
+                                    <form action="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=common/language/language"
+                                          method="post" enctype="multipart/form-data" id="form-language">
                                         <div class="btn-group">
                                             <button class="btn btn-link">
                                                 Language
 
-                                                <img src="catalog/language/en-gb/en-gb.png" alt="English" title="English">
+                                                <img src="catalog/language/en-gb/en-gb.png" alt="English"
+                                                     title="English">
                                             </button>
                                             <ul class="language-menu">
                                                 <li>
-                                                    <button class="btn btn-link btn-block language-select" type="button" name="en-gb"><img src="catalog/language/en-gb/en-gb.png" alt="English" title="English"> English</button>
+                                                    <button class="btn btn-link btn-block language-select" type="button"
+                                                            name="en-gb"><img src="catalog/language/en-gb/en-gb.png"
+                                                                              alt="English" title="English"> English
+                                                    </button>
                                                 </li>
                                                 <li>
-                                                    <button class="btn btn-link btn-block language-select" type="button" name="ar"><img src="catalog/language/ar/ar.png" alt="Arabic" title="Arabic"> Arabic</button>
+                                                    <button class="btn btn-link btn-block language-select" type="button"
+                                                            name="ar"><img src="catalog/language/ar/ar.png" alt="Arabic"
+                                                                           title="Arabic"> Arabic
+                                                    </button>
                                                 </li>
                                             </ul>
                                         </div>
                                         <input type="hidden" name="code" value="">
-                                        <input type="hidden" name="redirect" value="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/account">
+                                        <input type="hidden" name="redirect"
+                                               value="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/account">
                                     </form>
                                 </div>
 
                                 <div class="pull-left">
-                                    <form action="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=common/currency/currency" method="post" enctype="multipart/form-data" id="form-currency">
+                                    <form action="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=common/currency/currency"
+                                          method="post" enctype="multipart/form-data" id="form-currency">
                                         <div class="btn-group">
                                             <button class="btn btn-link">
                                                 Currency
@@ -416,25 +461,32 @@
                                             </button>
                                             <ul class="currency-menu">
                                                 <li>
-                                                    <button class="currency-select btn btn-link btn-block" type="button" name="EUR">€</button>
+                                                    <button class="currency-select btn btn-link btn-block" type="button"
+                                                            name="EUR">€
+                                                    </button>
                                                 </li>
                                                 <li>
-                                                    <button class="currency-select btn btn-link btn-block" type="button" name="GBP">£</button>
+                                                    <button class="currency-select btn btn-link btn-block" type="button"
+                                                            name="GBP">£
+                                                    </button>
                                                 </li>
                                                 <li>
-                                                    <button class="currency-select btn btn-link btn-block" type="button" name="USD">$</button>
+                                                    <button class="currency-select btn btn-link btn-block" type="button"
+                                                            name="USD">$
+                                                    </button>
                                                 </li>
                                             </ul>
                                         </div>
                                         <input type="hidden" name="code" value="">
-                                        <input type="hidden" name="redirect" value="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/account">
+                                        <input type="hidden" name="redirect"
+                                               value="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/account">
                                     </form>
                                 </div>
 
                             </li>
                         </ul>
 
-                    <%}%>
+                        <%}%>
                     </div>
                     <div id="search" class="input-group">
                         <span class="search_button"></span>

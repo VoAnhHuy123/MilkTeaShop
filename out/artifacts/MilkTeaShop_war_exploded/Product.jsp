@@ -1,3 +1,4 @@
+<%@ page import="java.sql.ResultSet" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>﻿
 <!DOCTYPE html>
 <!--[if IE]><![endif]-->
@@ -6,7 +7,6 @@
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html dir="ltr" lang="en">
 <!--<![endif]-->
-
 <!-- Mirrored from demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=product/product&product_id=48 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Oct 2019 15:41:54 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
@@ -63,9 +63,8 @@
 
     <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
 </head>
-
-
 <body class="product-product-48 layout-1">
+<% ResultSet rs = (ResultSet) request.getAttribute("a"); %>
 <%@ include file="Layout/header.jsp" %>
 
 <div class="wrap-breadcrumb parallax-breadcrumb">

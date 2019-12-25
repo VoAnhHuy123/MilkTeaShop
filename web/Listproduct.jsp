@@ -65,6 +65,7 @@
     <!-- Codezeel www.codezeel.com - End -->
 
     <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
+    <script src="js/ajax.js"></script>
     <%--    <script src="Javascript/Paging.js" type="text/javascript"></script>--%>
     <%--    <script src="Javascript/Pagination.js" type="text/javascript"></script>--%>
     <style>
@@ -361,9 +362,9 @@
                                     <button type="button" class="compare" data-toggle="tooltip" title="Add to Compare"
                                             onclick="compare.add('32');"><i class="fa fa-exchange"></i></button>
                                     <button type="button" class="addtocart" data-toggle="tooltip" title="Add to Cart "
-                                            onclick="cart.add('32 ');"><span>Add to Cart</span></button>
-                                </div>
-                            </div>
+                                            onclick="addToCartSmall(<%=ss.getInt("id")%>)"><span>Add to Cart</span></button>
+                        </div>
+                    </div>
                             <div class="product-details">
                                 <div class="caption">
                                     <div class="rating">

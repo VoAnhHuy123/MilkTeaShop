@@ -250,7 +250,7 @@
                                     <div class="product-block product-thumb transition">
                                         <div class="product-block-inner">
                                             <div class="image">
-                                                <a href="indexb77e.html?route=product/product&amp;product_id=48">
+                                                <a href="<%=Util.fullPath("DetailProduct?id="+ss.getString("id"))%>">
                                                     <img src="<%= ss.getString("image")%>"
                                                          title="Voluptates Repudiandae" alt="Voluptates Repudiandae"
                                                          class="img-responsive reg-image"/>
@@ -272,7 +272,7 @@
                                                             title="Add to Compare " onclick="compare.add('48 ');">
                                                         <i class="fa fa-exchange"></i></button>
                                                     <button type="button" class="addtocart" data-toggle="tooltip"
-                                                            title="Add to Cart " onclick="addToCart(1)"><span>Add to Cart</span>
+                                                            title="Add to Cart " onclick="addToCartSmall(<%=ss.getInt("id")%>)"><span>Add to Cart</span>
                                                     </button>
                                                 </div>
                                             </div>
@@ -331,7 +331,7 @@
                                     <div class="product-block product-thumb transition">
                                         <div class="product-block-inner">
                                             <div class="image">
-                                                <a href="indexd21c.html?route=product/product&amp;product_id=47">
+                                                <a href="<%=Util.fullPath("DetailProduct?id="+sss.getString("id"))%>">
                                                     <img src="<%= sss.getString("image")%>"
                                                          title="Accusantium Doloremque" alt="Accusantium Doloremque"
                                                          class="img-responsive reg-image"/>
@@ -413,7 +413,7 @@
                                     <div class="product-block product-thumb transition">
                                         <div class="product-block-inner">
                                             <div class="image">
-                                                <a href="indexfac8.html?route=product/product&amp;product_id=35">
+                                                <a href="<%=Util.fullPath("DetailProduct?id="+ssss.getString("id"))%>">
                                                     <img src="<%= ssss.getString("image")%>"
                                                          title="Commodi Consequatur" alt="Commodi Consequatur"
                                                          class="img-responsive reg-image"/>

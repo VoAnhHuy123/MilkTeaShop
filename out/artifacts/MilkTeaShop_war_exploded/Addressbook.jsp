@@ -1,3 +1,6 @@
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="vn.edu.nlu.fit.Model.*" %>
+<%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>﻿
 
 <!DOCTYPE html>
@@ -55,6 +58,7 @@
 
 
 <body class="account-address layout-2 left-col">
+<% ResultSet rs = (ResultSet) request.getAttribute("a"); %>
 <%@ include file="Layout/header.jsp" %>
 
 <div class="wrap-breadcrumb parallax-breadcrumb">
@@ -115,6 +119,14 @@
 
         <div id="content" class="col-sm-9">
             <h2>Address Book Entries</h2>
+
+            <%HttpSession session1 = request.getSession();
+                User user = (User) session1.getAttribute("user");
+                List<Address> addressList = user.getAddressList();
+                if (addressList.size()==0){
+            %>
+            <p>Không có địa chỉ trong tài khoản.</p>
+            <%}else{%>
             <div class="table-responsive">
                 <table class="table table-bordered table-hover">
                     <tr>
@@ -123,6 +135,7 @@
                     </tr>
                 </table>
             </div>
+            <%}%>
             <div class="buttons clearfix">
                 <div class="pull-left"><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/account" class="btn btn-default">Back</a></div>
                 <div class="pull-right"><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/address/add" class="btn btn-primary">New Address</a></div>

@@ -41,7 +41,8 @@ public class DoRegister extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("utf8");
+        request.setCharacterEncoding("utf8");
         String firstName = request.getParameter("firstname");
         String lastName = request.getParameter("lastname");
         String email = request.getParameter("email");
@@ -76,8 +77,8 @@ public class DoRegister extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        response.getWriter().println("sdfs");
-        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("utf8");
         String recipient = request.getParameter("email");
         String first_name = request.getParameter("firstname");
         String last_name = request.getParameter("lastname");

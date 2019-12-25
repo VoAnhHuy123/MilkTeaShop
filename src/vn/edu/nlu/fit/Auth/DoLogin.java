@@ -50,14 +50,21 @@ public class DoLogin extends HttpServlet {
             rs.first();
 
             if ((count == 1) && (valuate == true) && (rs.getInt("active")==1)) {
+
                 //newUser
                 HttpSession session = request.getSession();
                 User user = new User();
+                List<Address> addressList = new ArrayList<>();
+                user.setAddressList(addressList);
                 user.setId(rs.getInt("id"));
                 user.setEmail(rs.getString("email"));
                 user.setFirst_name(rs.getString("first_name"));
                 user.setLast_name(rs.getString("last_name"));
                 user.setPhone(rs.getString("phone"));
+                //admin
+                if ((count == 1) && (valuate == true) && (rs.getInt("active")==1) && (rs.getInt("admin") ==1)){
+                    user.setAdmin(1);
+                }
                 //setShoppingCart
                 pre2 = ConnectionDB.connect(sql);
                 pre2.setInt(1, rs.getInt("id"));
@@ -68,8 +75,8 @@ public class DoLogin extends HttpServlet {
                 while (rs2.next()) {
 
                     List<Topping> toppings= new ArrayList<>();
-                    Item item = new Item();
-                    item.setId(rs2.getInt("id"));
+                    Item item = new Item(toppings);
+//                    item.setId(rs2.getInt("id"));
                     item.setName(rs2.getString("name"));
                     item.setImage(rs2.getString("image"));
                     item.setQuantity(rs2.getInt("quality"));
@@ -91,13 +98,12 @@ public class DoLogin extends HttpServlet {
                            toppings.add(topping);
 
                        }
-                        item.setToppingList(toppings);
 
                     }
 
 //                    response.getWriter().println(item.getToppingList().get(0).getName());
                     shoppingCart.setListItem(item);
-                    response.getWriter().println("adsad");
+//                    response.getWriter().println("adsad");
                 }
                 user.setShoppingCart(shoppingCart);
                 session.setAttribute("user", user);

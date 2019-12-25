@@ -5,10 +5,9 @@ function addToCartSmall(id) {
         type: 'GET',
         dataType: 'text',
         data: {id: id},
-        async: false,
         responseType: "text",
+        contentType: "application/json; charset=utf-8",
         success: function (abc) {
-            alert(abc);
             var json = JSON.parse(abc);
             updateQuickCart(json);
         }
@@ -19,19 +18,18 @@ function addToCartSmall(id) {
 }
 
 function deleteFromCart(id) {
-   var end =  $.ajax({
+   $.ajax({
         url: 'http://localhost:8080/MilkTeaShop/DeleteFromCart',
         type: "GET",
         dataType: 'text',
         // cache: true,
         // async:false,
-        contentType: "application/json; charset=utf-8",
+
         data: {id: id},
         success: function (abc1) {
             if (abc1!=null) {
                 var user = JSON.parse(abc1);
                 console.log(id);
-                updateMainCart(user);
                 updateQuickCart(user);
             }else {
 
@@ -43,79 +41,6 @@ function deleteFromCart(id) {
     // end.abort();
 
 }
-
-function updateMainCart(user) {
-    var listItem = user.shoppingCart.listItem;
-    result=" <h1 class=\"page-title\">Shopping Cart\n" +
-        "            </h1>\n";
-    if (listItem.length==0){
-        result=" <h1>Shopping Cart</h1>\n" +
-            "            <p>Your shopping cart is empty!</p>\n" +
-            "            <div class=\"buttons clearfix\">\n" +
-            "                <div class=\"pull-right\"><a\n" +
-            "                        href=\"\"\n" +
-            "                        class=\"btn btn-primary\">Continue</a></div>\n" +
-            "            </div>";
-    }else{
-
-         result+=   "            <form action=\"\"\n" +
-            "                  method=\"post\">\n" +
-            "                <div class=\"table-responsive\">\n" +
-            "                    <table class=\"table table-bordered shopping-cart\">\n" +
-            "                        <thead>\n" +
-            "                        <tr>\n" +
-            "                            <td class=\"text-center\">Image</td>\n" +
-            "                            <td class=\"text-left\">Product Name</td>\n" +
-            "                            <td class=\"text-left\">Topping</td>\n" +
-            "                            <td class=\"text-left\">Quantity</td>\n" +
-            "                            <td class=\"text-right\">Unit Price</td>\n" +
-            "                            <td class=\"text-right\">Total</td>\n" +
-            "                        </tr>\n" +
-            "                        </thead>\n" +
-            "                        <tbody>";
-        for (i = 0; i < listItem.length; i++) {
-            result+="  <tr>\n" +
-                "                            <td class=\"text-center\"><a\n" +
-                "                                    href=\"https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=product/product&amp;product_id=35\"><img\n" +
-                "                                    style=\"height: 87px; width: 87px\" src=\""+listItem[i].image+"\"\n" +
-                "                                    alt=\"Commodi Consequatur\" title=\"Commodi Consequatur\" class=\"img-thumbnail\"></a>\n" +
-                "                            </td>\n" +
-                "                            <td class=\"text-left\"><a\n" +
-                "                                    href=\"https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=product/product&amp;product_id=35\">"+listItem[i].name+"\n" +
-                "                            </a> <br>\n" +
-                "                                <small>Size: "+listItem[i].size+"\n" +
-                "                                </small></td>\n" +
-                "                            <td class=\"text-left\">\n";
-
-                if (listItem[i].toppingList==null){
-                    result+=  " <small>(Không có topping)</small>\n" ;
-                }else{
-                    for (j = 0; j < listItem[i].toppingList.length; j++) {
-                        result+="<small>+ "+listItem[i].toppingList[0].name+": "+ listItem[i].toppingList[0].price+"đ</small><br>\n";
-                    }
-                }
-               result+= "                            </td>\n" +
-                "                            <td class=\"text-left\" style=\"width: 160px\">\n" +
-                "                                <div class=\"input-group btn-block\" style=\"max-width: 200px;\">\n" +
-                "                                    <input type=\"number\" onchange=\"changeQuantity("+i+")\"\n" +
-                "                                           style=\"max-width: 70px\" name=\"quantity[80]\" value=\""+listItem[i].quantity+"\"\n" +
-                "                                           size=\"1\" class=\"form-control\"/>\n" +
-                "                                    <span class=\"input-group-btn\">\n" +
-                "\n" +
-                "                  <button type=\"button\"  title=\"\" class=\"btn btn-danger\"\n" +
-                "                          onclick=\"deleteFromCart("+ listItem[i].id+")\"><i\n" +
-                "                          class=\"fa fa-times-circle\"></i></button>\n" +
-                "                  </span>\n" +
-                "                                </div>\n" +
-                "                            </td>\n" +
-                "                            <td class=\"text-right\">"+listItem[i].price / listItem[i].quantity+"đ</td>\n" +
-                "                            <td class=\"text-right\">"+listItem[i].price+"đ</td>\n" +
-                "                        </tr>";
-        }
-    }
-    $('#content').html(result);
-}
-
 function updateQuickCart(user) {
 
     var listItem = user.shoppingCart.listItem;
@@ -224,3 +149,17 @@ function changeQuantity(index) {
     });
 
 }
+function validate() {
+
+}
+
+$(document).ready(function(){
+    $("input").blur(function(){
+        if (this.value === ""){
+          this.parentElement.parentElement.className +=' has-error';
+          var alertt = '<input type=\"text\" name=\"name\" value=\"\" placeholder=\"Họ và tên\" id=\"input-name\" autofocus=\"\" class=\"form-control\">';
+          this.parentElement.append( '<input type=\"text\" name=\"name\" value=\"\" placeholder=\"Họ và tên\" id=\"input-name\" autofocus=\"\" class=\"form-control\">' );
+        }
+
+    });
+});

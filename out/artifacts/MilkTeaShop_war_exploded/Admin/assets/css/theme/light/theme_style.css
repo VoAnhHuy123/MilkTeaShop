@@ -3172,8 +3172,8 @@ textarea.form-control-textarea {
     max-width: 100%;
 }
 .user-panel .image {
-    width: 35%;
-    max-width: 75px;
+    width: 60%;
+    /*max-width: 75px;*/
 }
 .user-panel .info {
     width: 50%;

@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.util.List;
 
 public class Item {
-    int id;
+//    int id;
     int productId;
     String name;
     String image;
@@ -15,7 +15,7 @@ public class Item {
 
 
     public Item(int id,int productId, String name, String image, double price, int quantity, List<Topping> toppingList, String size) {
-        this.id = id;
+//        this.id = id;
         this.productId=productId;
         this.name = name;
         this.image = image;
@@ -23,6 +23,10 @@ public class Item {
         this.quantity = quantity;
         this.toppingList = toppingList;
         this.size = size;
+    }
+
+    public Item(List<Topping> toppingList) {
+        this.toppingList = toppingList;
     }
 
     public String getSize() {
@@ -41,13 +45,13 @@ public class Item {
         this.productId = productId;
     }
 
-    public int getId() {
-        return id;
-    }
+//    public int getId() {
+//        return id;
+//    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+//    public void setId(int id) {
+//        this.id = id;
+//    }
 
     public Item() {
     }

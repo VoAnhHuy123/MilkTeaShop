@@ -65,7 +65,8 @@
     <!-- Codezeel www.codezeel.com - End -->
 
     <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
-    <script src="js/ajax.js"></script>
+<%--    <script src="js/ajax.js"></script>--%>
+    <script src="js/shoppingCart.js"></script>
 </head>
 <body class="checkout-cart layout-2 left-col">
 <% ResultSet rs = (ResultSet) request.getAttribute("a"); %>

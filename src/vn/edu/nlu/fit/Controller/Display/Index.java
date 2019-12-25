@@ -46,9 +46,9 @@ public class Index extends HttpServlet {
         try {
             String sql = "SELECT * FROM type WHERE active=1";
             //new product
-            String sql1 = "SELECT * FROM product WHERE active=1 AND type_id='1-TS'";
-            String sql2 = "SELECT * FROM product WHERE active=1 AND type_id='3-TĐB'";
-            String sql3 = "SELECT * FROM product WHERE active=1 AND type_id='2-TX'";
+            String sql1 = "SELECT * FROM product WHERE active=1 AND type_id='1'";
+            String sql2 = "SELECT * FROM product WHERE active=1 AND type_id='3'";
+            String sql3 = "SELECT * FROM product WHERE active=1 AND type_id='2'";
 //            future products
             String sql4 = "SELECT * FROM futured_product WHERE active=1";
             //slider

@@ -4,10 +4,9 @@ package vn.edu.nlu.fit.Controller.Display;
 import com.google.gson.Gson;
 import com.mysql.jdbc.PreparedStatement;
 import vn.edu.nlu.fit.DB.ConnectionDB;
-import vn.edu.nlu.fit.Model.Item;
+import vn.edu.nlu.fit.Model.*;
 import vn.edu.nlu.fit.Model.Product;
 import vn.edu.nlu.fit.Model.ShoppingCart;
-import vn.edu.nlu.fit.Model.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,9 +24,9 @@ public class AddToCartSmall extends HttpServlet {
 
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("utf-8");
-
         HttpSession session = request.getSession();
 
         User user = (User) session.getAttribute("user");
@@ -49,7 +48,8 @@ public class AddToCartSmall extends HttpServlet {
             psProduct.setInt(1, idInt);
             ResultSet rsProduct = psProduct.executeQuery();
             rsProduct.next();
-            Item item = new Item();
+            ArrayList<Topping> toppings = new ArrayList<>();
+            Item item = new Item(toppings);
             int quantity=1;
             item.setImage(rsProduct.getString("image"));
             item.setName(rsProduct.getString("name"));
@@ -57,8 +57,12 @@ public class AddToCartSmall extends HttpServlet {
             item.setQuantity(quantity);
             item.setProductId(idInt);
             item.setSize("L");
+
+
 //            for (Item items:user.getShoppingCart().getListItem()) {
-                if (user.getShoppingCart().isExist(item)!=null){
+            if (user.getShoppingCart().getListItem()==null){
+                user.getShoppingCart().getListItem().add(item);
+            }else if (user.getShoppingCart().isExist(item)!=null){
                     quantity+=user.getShoppingCart().isExist(item).getQuantity();
                     user.getShoppingCart().isExist(item).setQuantity(quantity);
                     user.getShoppingCart().isExist(item).setPrice( user.getShoppingCart().isExist(item).getPrice()+ item.getPrice());
@@ -74,6 +78,7 @@ public class AddToCartSmall extends HttpServlet {
 //                    rsEdit.updateRow();
 //                    response.getWriter().println("safsaf");
                 }else{
+                user.getShoppingCart().getListItem().add(item);
 //                    String splInsert = "SELECT * FROM shopping_cart";
 //                    psInsert = ConnectionDB.connect(splInsert);
 //                    ResultSet rsInsert = psInsert.executeQuery();
@@ -87,8 +92,8 @@ public class AddToCartSmall extends HttpServlet {
 //                    rsInsert.insertRow();
 //                    rsInsert.updateRow();
 //                    item.setId(rsInsert.getInt("id"));
-                    item.setId(user.getShoppingCart().setNewId());
-                    user.getShoppingCart().getListItem().add(item);
+//                    item.setId(user.getShoppingCart().setNewId());
+
 
                 }
 
@@ -97,6 +102,7 @@ public class AddToCartSmall extends HttpServlet {
 
             Gson gson = new Gson();
             String jsonPro = gson.toJson(user);
+
             response.setContentType("application/json");
             response.getWriter().println(jsonPro);
         } catch (SQLException | ClassNotFoundException e) {

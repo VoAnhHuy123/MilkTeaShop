@@ -18,9 +18,9 @@ public class ShoppingCart {
         this.listItem = new ArrayList<>();
 
     }
-    public int setNewId(){
-      return   listItem.get(listItem.size()-1).getId()+1;
-    }
+//    public int setNewId(){
+//      return   listItem.get(listItem.size()-1).getId()+1;
+//    }
     public double total() {
         double total = 0;
         for (Item item : listItem) {
@@ -40,15 +40,14 @@ public class ShoppingCart {
 
     public Item isExist(Item item) {
 
-       a:for (Item items : listItem) {
-           ArrayList<Topping> a = (ArrayList<Topping>) items.getToppingList();
+       a:for (int i=0; i < listItem.size(); i++) {
+           ArrayList<Topping> a = (ArrayList<Topping>) listItem.get(i).getToppingList();
            ArrayList<Topping> b = (ArrayList<Topping>) item.getToppingList();
 
-            if ((items.getProductId() == item.getProductId()) && (items.getSize().equals(item.getSize()))) {
+            if ((listItem.get(i).getProductId() == item.getProductId()) && (listItem.get(i).getSize().equals(item.getSize()))) {
                 if (a == null && b == null){
-                    return items;
+                    return listItem.get(i);
                 }
-
                 if((a == null && b != null)
                         || a != null && b == null
                         || a.size() != b.size()){
@@ -60,7 +59,7 @@ public class ShoppingCart {
 
 
                 if (a.containsAll(b) && b.containsAll(a)){
-                    return  items;
+                    return  listItem.get(i);
                 }
 
             }
@@ -72,7 +71,7 @@ public class ShoppingCart {
 
     public void removeItem(int id) {
        for (int i = 0 ; i<listItem.size(); i++){
-           if (listItem.get(i).getId() == id){
+           if (i == id){
                listItem.remove(listItem.get(i));
                return;
            }
