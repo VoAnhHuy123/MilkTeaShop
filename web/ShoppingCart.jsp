@@ -65,7 +65,7 @@
     <!-- Codezeel www.codezeel.com - End -->
 
     <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
-<%--    <script src="js/ajax.js"></script>--%>
+    <%--    <script src="js/ajax.js"></script>--%>
     <script src="js/shoppingCart.js"></script>
 </head>
 <body class="checkout-cart layout-2 left-col">
@@ -105,10 +105,10 @@
         <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=checkout/cart">Shopping Cart</a>
         </li>
     </ul>
-<%--    <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> Success: You have modified--%>
-<%--        your shopping cart!--%>
-<%--        <button type="button" class="close" data-dismiss="alert">&times;</button>--%>
-<%--    </div>--%>
+    <%--    <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> Success: You have modified--%>
+    <%--        your shopping cart!--%>
+    <%--        <button type="button" class="close" data-dismiss="alert">&times;</button>--%>
+    <%--    </div>--%>
     <div class="row">
         <aside id="column-left" class="col-sm-3 hidden-xs">
             <div class="box">
@@ -421,6 +421,7 @@
                         <tbody>
                         <%
                             ArrayList<Item> itemArrayList = (ArrayList<Item>) user.getShoppingCart().getListItem();
+                            int sum = (int) user.getShoppingCart().total();
                             for (Item item : itemArrayList) {%>
                         <tr>
                             <td class="text-center"><a
@@ -443,7 +444,7 @@
                                 } else {
                                     for (Topping topping : toppings) {
                                 %>
-                                 <small>+ <%=topping.getName()%>: <%=topping.getPrice()%>đ</small><br>
+                                <small>+ <%=topping.getName()%>: <%=topping.getPrice()%>đ</small><br>
                                 <%}%>
                                 <%}%>
 
@@ -456,7 +457,7 @@
                                     <span class="input-group-btn">
 
                   <a type="button" title="" class="btn btn-danger"
-                          onclick="deleteFromCart(<%=item.getId()%>)"><i
+                     onclick="deleteFromCart(<%=itemArrayList.indexOf(item)%>)"><i
                           class="fa fa-times-circle"></i></a>
                   </span>
                                 </div>
@@ -477,109 +478,83 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title"><a href="#collapse-coupon" class="accordion-toggle"
-                                                   data-toggle="collapse" data-parent="#accordion">Use Coupon Code <i
+                                                   data-toggle="collapse" data-parent="#accordion">Mã giảm giá<i
                                 class="fa fa-caret-down"></i></a></h4>
                     </div>
                     <div id="collapse-coupon" class="panel-collapse collapse">
                         <div class="panel-body">
-                            <label class="col-sm-2 control-label" for="input-coupon">Enter your coupon here</label>
+                            <label class="col-sm-2 control-label" for="input-coupon">Nhập mã giảm giá tại đây</label>
                             <div class="input-group">
                                 <input type="text" name="coupon" value="" placeholder="Enter your coupon here"
                                        id="input-coupon" class="form-control">
-                                <span class="input-group-btn">
-        <input type="button" value="Apply Coupon" id="button-coupon" data-loading-text="Loading..."
-               class="btn btn-primary">
-        </span></div>
-<%--                            <script type="text/javascript"><!----%>
-<%--                            $('#button-coupon').on('click', function () {--%>
-<%--                                $.ajax({--%>
-<%--                                    url: 'index.php?route=extension/total/coupon/coupon',--%>
-<%--                                    type: 'post',--%>
-<%--                                    data: 'coupon=' + encodeURIComponent($('input[name=\'coupon\']').val()),--%>
-<%--                                    dataType: 'json',--%>
-<%--                                    beforeSend: function () {--%>
-<%--                                        $('#button-coupon').button('loading');--%>
-<%--                                    },--%>
-<%--                                    complete: function () {--%>
-<%--                                        $('#button-coupon').button('reset');--%>
-<%--                                    },--%>
-<%--                                    success: function (json) {--%>
-<%--                                        $('.alert-dismissible').remove();--%>
 
-<%--                                        if (json['error']) {--%>
-<%--                                            $('.breadcrumb').after('<div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');--%>
 
-<%--                                            $('html, body').animate({scrollTop: 0}, 'slow');--%>
-<%--                                        }--%>
+                            </div>
+                            <script>
+                                $(document).ready(function () {
+                                    $("#input-coupon").blur(function () {
+                                        console.log("blur");
+                                        var a = document.getElementById("input-coupon").value;
+                                        console.log(a);
+                                        $.ajax({
+                                            url: 'http://localhost:8080/MilkTeaShop/Coupon',
+                                            type: 'GET',
+                                            dataType: 'text',
+                                            data: {coupon: a},
+                                            responseType: "text",
+                                            contentType: "application/json; charset=utf-8",
+                                            success: function (abc) {
+                                                var json = JSON.parse(abc);
 
-<%--                                        if (json['redirect']) {--%>
-<%--                                            location = json['redirect'];--%>
-<%--                                        }--%>
-<%--                                    },--%>
-<%--                                    error: function (xhr, ajaxOptions, thrownError) {--%>
-<%--                                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);--%>
-<%--                                    }--%>
-<%--                                });--%>
-<%--                            });--%>
-<%--                            //--></script>--%>
-                        </div>
-                    </div>
-                </div>
+                                                console.log(json[0]);
+                                                if (abc === 0) {
+                                                    alert("ma giam gia khong hop le")
+                                                } else {
+                                                    alert("thanh cong")
+                                                    $("#giamgia").html(json[0]);
 
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title"><a href="#collapse-voucher" data-toggle="collapse"
-                                                   data-parent="#accordion" class="accordion-toggle">Use Gift
-                            Certificate <i class="fa fa-caret-down"></i></a></h4>
-                    </div>
-                    <div id="collapse-voucher" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <label class="col-sm-2 control-label" for="input-voucher">Enter your gift certificate code
-                                here</label>
-                            <div class="input-group">
-                                <input type="text" name="voucher" value=""
-                                       placeholder="Enter your gift certificate code here" id="input-voucher"
-                                       class="form-control">
-                                <span class="input-group-btn">
-        <input type="submit" value="Apply Voucher" id="button-voucher" data-loading-text="Loading..."
-               class="btn btn-primary">
-        </span></div>
-                            <script type="text/javascript"><!--
-                            $('#button-voucher').on('click', function () {
-                                $.ajax({
-                                    url: 'index.php?route=extension/total/voucher/voucher',
-                                    type: 'post',
-                                    data: 'voucher=' + encodeURIComponent($('input[name=\'voucher\']').val()),
-                                    dataType: 'json',
-                                    beforeSend: function () {
-                                        $('#button-voucher').button('loading');
-                                    },
-                                    complete: function () {
-                                        $('#button-voucher').button('reset');
-                                    },
-                                    success: function (json) {
-                                        $('.alert-dismissible').remove();
-
-                                        if (json['error']) {
-                                            $('.breadcrumb').after('<div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-
-                                            $('html, body').animate({scrollTop: 0}, 'slow');
-                                        }
-
-                                        if (json['redirect']) {
-                                            location = json['redirect'];
-                                        }
-                                    },
-                                    error: function (xhr, ajaxOptions, thrownError) {
-                                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                                    }
+                                                    $("#tongtien").html(json[1]);
+                                                }
+                                            }
+                                        })
+                                    });
                                 });
-                            });
-                            //--></script>
+                            </script>
+                            <%--                            <script type="text/javascript"><!----%>
+                            <%--                            $('#button-coupon').on('click', function () {--%>
+                            <%--                                $.ajax({--%>
+                            <%--                                    url: 'index.php?route=extension/total/coupon/coupon',--%>
+                            <%--                                    type: 'post',--%>
+                            <%--                                    data: 'coupon=' + encodeURIComponent($('input[name=\'coupon\']').val()),--%>
+                            <%--                                    dataType: 'json',--%>
+                            <%--                                    beforeSend: function () {--%>
+                            <%--                                        $('#button-coupon').button('loading');--%>
+                            <%--                                    },--%>
+                            <%--                                    complete: function () {--%>
+                            <%--                                        $('#button-coupon').button('reset');--%>
+                            <%--                                    },--%>
+                            <%--                                    success: function (json) {--%>
+                            <%--                                        $('.alert-dismissible').remove();--%>
+
+                            <%--                                        if (json['error']) {--%>
+                            <%--                                            $('.breadcrumb').after('<div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');--%>
+
+                            <%--                                            $('html, body').animate({scrollTop: 0}, 'slow');--%>
+                            <%--                                        }--%>
+
+                            <%--                                        if (json['redirect']) {--%>
+                            <%--                                            location = json['redirect'];--%>
+                            <%--                                        }--%>
+                            <%--                                    },--%>
+                            <%--                                    error: function (xhr, ajaxOptions, thrownError) {--%>
+                            <%--                                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);--%>
+                            <%--                                    }--%>
+                            <%--                                });--%>
+                            <%--                            });--%>
+                            <%--                            //--></script>--%>
                         </div>
                     </div>
                 </div>
-
             </div>
             <br>
             <div class="row">
@@ -587,20 +562,12 @@
                     <table class="table table-bordered">
                         <tbody>
                         <tr>
-                            <td class="text-right"><strong>Sub-Total:</strong></td>
-                            <td class="text-right">$250.00</td>
+                            <td class="text-right"><strong>Giảm giá</strong></td>
+                            <td class="text-right"><span id="giamgia">0</span>Đ</td>
                         </tr>
                         <tr>
-                            <td class="text-right"><strong>Eco Tax (-2.00):</strong></td>
-                            <td class="text-right">$4.00</td>
-                        </tr>
-                        <tr>
-                            <td class="text-right"><strong>VAT (20%):</strong></td>
-                            <td class="text-right">$50.00</td>
-                        </tr>
-                        <tr>
-                            <td class="text-right"><strong>Total:</strong></td>
-                            <td class="text-right">$304.00</td>
+                            <td class="text-right"><strong>Tổng tiền</strong></td>
+                            <td class="text-right"><span id="tongtien"><%=sum%></span>Đ</td>
                         </tr>
                         </tbody>
                     </table>
@@ -608,16 +575,34 @@
             </div>
             <div class="buttons clearfix">
                 <div class="pull-left"><a
-                        href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=common/home"
+                        href="<%=Util.fullPath("Index")%>"
                         class="btn btn-default">Continue Shopping</a></div>
-                <div class="pull-right"><a
-                        href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=checkout/checkout"
+                <div class="pull-right" id="button-checkout"><a
+                        href="<%=Util.fullPath("ChooseAddress")%>"
                         class="btn btn-primary">Checkout</a></div>
             </div>
             <%}%>
         </div>
     </div>
 </div>
+<script>
+    $("#button-checkout").click(function () {
+        var a = $("#giamgia").html();
+        var b = $("#tongtien").html();
+        $.ajax({
+            url: 'http://localhost:8080/MilkTeaShop/InitOrder',
+            type: 'GET',
+            dataType: 'text',
+            data: {totalPrice: b, giamgia: a},
+            responseType: "text",
+            contentType: "application/json; charset=utf-8",
+            success: function (abc) {
+
+            }
+        })
+
+    })
+</script>
 <%@ include file="Layout/footer.jsp" %>
 
 <!--

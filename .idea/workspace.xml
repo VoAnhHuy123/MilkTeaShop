@@ -7,159 +7,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc440f3f-1f4a-4106-be9b-54f5313a4211" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/detailProduct.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MilkTeaShop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MilkTeaShop.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Addressbook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Addressbook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Admin/assets/css/theme/light/theme_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Admin/assets/css/theme/light/theme_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Admin/assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Admin/assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Admin/light/add_professor_bootstrap.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Admin/light/all_professor.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Admin/light/all_professors.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Admin/light/edit_professor.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Admin/light/fonts/font-awesome/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Admin/light/fonts/font-awesome/css/font-awesome.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Admin/light/fonts/font-awesome/fonts/fontawesome-webfont3e6e.svg" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Admin/light/fonts/font-awesome/fonts/fontawesome-webfont3e6e.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Admin/light/fonts/material-design-icons/material-icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Admin/light/fonts/material-design-icons/material-icon.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Admin/light/fonts/simple-line-icons/fonts/Simple-Line-Iconsb26c.svg" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Admin/light/fonts/simple-line-icons/fonts/Simple-Line-Iconsb26c.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Admin/light/fonts/simple-line-icons/simple-line-icons.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Admin/light/fonts/simple-line-icons/simple-line-icons.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Admin/light/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Admin/light/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Changepassword.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Changepassword.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Editaccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Editaccount.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Forgotpass.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Forgotpass.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Layout/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Listproduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Listproduct.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Checkout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Checkout.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Layout/accountmenu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Layout/accountmenu.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Myaccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Myaccount.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Newaddress.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Newaddress.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/Register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/ShoppingCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/ShoppingCart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Admin/AllUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Auth/DoConfirmRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Auth/DoConfirmRegister.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Auth/DoLogin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Auth/DoLogin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Auth/DoRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Auth/DoRegister.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Auth/EmailUtility$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Auth/EmailUtility$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Auth/EmailUtility.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Auth/EmailUtility.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/AddToCartSmall.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/AddToCartSmall.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/DeleteFromCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/DeleteFromCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/Index.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/Index.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/ListProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/ListProduct.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/Resgister.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/Resgister.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/ShoppingCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/ShoppingCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/UpdateCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/UpdateCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/DB/ConnectionDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/DB/ConnectionDB.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Filter/Authentication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Filter/Authentication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Model/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Model/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Model/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Model/ShoppingCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Model/ShoppingCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Model/Topping.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Model/Topping.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Servlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Servlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Test/ShopingCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Test/ShopingCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/util/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/util/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/activation.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/annotations-api.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/catalina-ant.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/catalina-ha.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/catalina-storeconfig.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/catalina-tribes.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/catalina.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/ecj-4.13.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/el-api.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/gson-2.8.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/jasper-el.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/jasper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/jaspic-api.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/javax.servlet-api-4.0.1-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/jbcrypt-0.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/jsp-api.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.26-bin.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/servlet-api.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/tomcat-api.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/tomcat-coyote.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/tomcat-dbcp.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/tomcat-i18n-cs.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/tomcat-i18n-de.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/tomcat-i18n-es.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/tomcat-i18n-fr.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/tomcat-i18n-ja.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/tomcat-i18n-ko.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/tomcat-i18n-pt-BR.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/tomcat-i18n-ru.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/tomcat-i18n-zh-CN.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/tomcat-jdbc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/tomcat-jni.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/tomcat-util-scan.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/tomcat-util.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/tomcat-websocket.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/lib/websocket-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/EditAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/MyAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/MyAccount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/SaveAddress.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Controller/Display/SaveAddress.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Model/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/WEB-INF/classes/vn/edu/nlu/fit/Model/Address.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/js/ajax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Admin/AllUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Auth/DoConfirmRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Auth/DoConfirmRegister.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/js/shoppingCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/js/shoppingCart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MilkTeaShop_war_exploded/test.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Auth/DoLogin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Auth/DoLogin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Auth/DoRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Auth/DoRegister.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Auth/EmailUtility$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Auth/EmailUtility$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Auth/EmailUtility.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Auth/EmailUtility.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/AddToCartSmall.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/AddToCartSmall.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/DeleteFromCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/DeleteFromCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/Index.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/Index.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/ListProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/ListProduct.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/Resgister.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/Resgister.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/ShoppingCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/ShoppingCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/UpdateCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/UpdateCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/DB/ConnectionDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/DB/ConnectionDB.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Filter/Authentication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Filter/Authentication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Model/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Model/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Model/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Model/ShoppingCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Model/ShoppingCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Model/Topping.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Model/Topping.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Servlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Servlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Test/ShopingCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Test/ShopingCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/util/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/util/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Admin/AllUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/EditAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/MyAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/MyAccount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/SaveAddress.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Controller/Display/SaveAddress.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Model/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilkTeaShop/vn/edu/nlu/fit/Model/Address.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Auth/DoLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Auth/DoLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Auth/DoRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Auth/DoRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Controller/Display/AddToCartSmall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Controller/Display/AddToCartSmall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Controller/Display/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Controller/Display/Index.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Model/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Model/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Model/ShoppingCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Controller/Display/EditAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Controller/Display/MyAccount1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Controller/Display/MyAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Controller/Display/MyAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Controller/Display/SaveAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Controller/Display/SaveAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Model/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vn/edu/nlu/fit/Model/Address.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/Addressbook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Addressbook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Admin/assets/css/theme/light/theme_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/Admin/assets/css/theme/light/theme_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Admin/assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/Admin/assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Admin/light/add_professor_bootstrap.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Admin/light/all_professor.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Admin/light/all_professors.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Admin/light/edit_professor.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Admin/light/fonts/font-awesome/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/Admin/light/fonts/font-awesome/css/font-awesome.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Admin/light/fonts/font-awesome/fonts/fontawesome-webfont3e6e.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/Admin/light/fonts/font-awesome/fonts/fontawesome-webfont3e6e.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Admin/light/fonts/material-design-icons/material-icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/Admin/light/fonts/material-design-icons/material-icon.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Admin/light/fonts/simple-line-icons/fonts/Simple-Line-Iconsb26c.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/Admin/light/fonts/simple-line-icons/fonts/Simple-Line-Iconsb26c.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Admin/light/fonts/simple-line-icons/simple-line-icons.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/Admin/light/fonts/simple-line-icons/simple-line-icons.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Admin/light/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Admin/light/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Changepassword.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Changepassword.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Editaccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Editaccount.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Forgotpass.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Forgotpass.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Layout/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Listproduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Listproduct.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Checkout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Checkout.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Layout/accountmenu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Layout/accountmenu.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/Myaccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Myaccount.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/Newaddress.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Newaddress.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/ShoppingCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/ShoppingCart.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/ajax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/shoppingCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/shoppingCart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/test.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +78,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../project" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -310,7 +191,18 @@
       <workItem from="1577074271345" duration="17405000" />
       <workItem from="1577149431743" duration="8666000" />
       <workItem from="1577186155265" duration="1003000" />
-      <workItem from="1577241771942" duration="2143000" />
+      <workItem from="1577241771942" duration="14415000" />
+      <workItem from="1577321517883" duration="10468000" />
+      <workItem from="1577344786639" duration="6972000" />
+      <workItem from="1577408485502" duration="11568000" />
+      <workItem from="1577671188101" duration="25068000" />
+      <workItem from="1577800681786" duration="7569000" />
+      <workItem from="1577863995004" duration="5505000" />
+      <workItem from="1577927444507" duration="13677000" />
+      <workItem from="1577946617109" duration="610000" />
+      <workItem from="1578211687408" duration="12735000" />
+      <workItem from="1578273574536" duration="3411000" />
+      <workItem from="1578307057452" duration="600000" />
     </task>
     <servers />
   </component>

@@ -82,7 +82,7 @@ function updateMainCart(user) {
                 "                                    <span class=\"input-group-btn\">\n" +
                 "\n" +
                 "                  <button type=\"button\"  title=\"\" class=\"btn btn-danger\"\n" +
-                "                          onclick=\"deleteFromCart("+ listItem[i].id+")\"><i\n" +
+                "                          onclick=\"deleteFromCart("+ i +")\"><i\n" +
                 "                          class=\"fa fa-times-circle\"></i></button>\n" +
                 "                  </span>\n" +
                 "                                </div>\n" +
@@ -140,7 +140,7 @@ function updateQuickCart(user) {
                 "                                            <td class=\"text-right\" style=\"font-size: 12px;\">" + listItem[i].price + "\n" +
                 "                                            </td>\n" +
                 "                                            <td class=\"text-center\">\n" +
-                "                                                <button type=\"button\" onclick=\"deleteFromCart(" + listItem[i].id + ")\" title=\"Remove\"\n" +
+                "                                                <button type=\"button\" onclick=\"deleteFromCart(" + i + ")\" title=\"Remove\"\n" +
                 "                                                        class=\"btn btn-danger btn-xs\"><i class=\"fa fa-times\"></i>\n" +
                 "                                                </button>\n" +
                 "                                            </td>\n" +

@@ -109,9 +109,9 @@
         <div id="content" class="col-sm-9">
             <h2>My Account</h2>
             <ul class="list-unstyled">
-                <li><a href="<%=Util.fullPath("EditAccount")%>">Edit your account information</a></li>
-                <li><a href="<%=Util.fullPath("ChangePassword")%>">Change your password</a></li>
-                <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/address">Modify your address book entries</a></li>
+                <li><a href="<%=Util.fullPath("EditAccount")%>">Thông tin tài khoản</a></li>
+                <li><a href="<%=Util.fullPath("ChangePassword")%>">Đổi mật khẩu</a></li>
+                <li><a href="<%=Util.fullPath("AddressBook")%>">Sổ địa chỉ</a></li>
                 <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/wishlist">Modify your wish list</a></li>
             </ul>
             <h3>My Orders</h3>

@@ -56,7 +56,7 @@
     <!-- Codezeel www.codezeel.com - End -->
 
     <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<%--    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>--%>
     <script src="js/ajax.js"></script>
 <%--    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>--%>
     <script>
@@ -69,21 +69,38 @@
                     dataType: 'text',
                     data: {idDistrict: idDistrict},
                     success: function (abc) {
-
                         var result=" <option value=\"\">Chọn Phường/Xã</option>";
                         var f = JSON.parse(abc);
                         for (var i=0; i< f.length; i++){
-
                             result += "\n" + "<option value=\"" + f[i].id + "\">" + f[i].name + "</option>" + "\n";
                         }
                         $('#input-ward').html(result);
                       document.getElementsByClassName('customSelectInner')[1].innerHTML="Chọn Phường/Xã";
                     }
-
                 })
             });
         });
     </script>
+    <style>
+        select:focus{
+            border-color: #66afe9;
+            outline: 0;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+        }
+        .form-control:focus{
+            border-color: #66afe9;
+            outline: 0;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+        }
+        .has-success .form-control {
+            border-color: #3c763d;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        }
+        .col-sm-10 select:focus{
+            border-color: #2a6dc9 !important;
+        }
+    </style>
 </head>
 
 
@@ -119,35 +136,8 @@
         <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/address">Address Book</a></li>
         <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/address/add">Add Address</a></li>
     </ul>
-    <div class="row"><aside id="column-left" class="col-sm-3 hidden-xs">
-        <div class="box">
-            <div class="box-heading">Account</div>
-            <div class="list-group">
-
-                <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/account " class="list-group-item">My Account </a>
-
-                <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/edit " class="list-group-item">Edit Account</a> <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/password" class="list-group-item">Password</a>
-
-                <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/address" class="list-group-item">Address Book</a> <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/wishlist " class="list-group-item">Wish List </a> <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/order " class="list-group-item">Order History </a> <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/download" class="list-group-item">Downloads </a><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/recurring" class="list-group-item">Recurring payments </a> <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/reward " class="list-group-item">Reward Points </a> <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/return" class="list-group-item">Returns </a> <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/transaction" class="list-group-item">Transactions </a> <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/newsletter" class="list-group-item">Newsletter </a>
-
-                <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/logout" class="list-group-item">Logout </a>
-
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="box-heading">Information</div>
-            <div class="list-group">
-                <a class="list-group-item" href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=information/information&amp;information_id=4">About Us </a>
-                <a class="list-group-item" href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=information/information&amp;information_id=6">Delivery Information </a>
-                <a class="list-group-item" href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=information/information&amp;information_id=3">Privacy Policy </a>
-                <a class="list-group-item" href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=information/information&amp;information_id=5">Terms &amp; Conditions </a>
-                <a class="list-group-item" href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=information/contact">Contact Us </a>
-                <a class="list-group-item" href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=information/sitemap">Site Map </a>
-            </div>
-        </div>
-    </aside>
-
+    <div class="row">
+        <%@ include file="Layout/accountmenu.jsp"%>
         <div id="content" class="col-sm-9">
             <h2>Add Address</h2>
             <form action="<%=Util.fullPath("SaveAddress")%>" method="post" class="form-horizontal">
@@ -155,14 +145,14 @@
                     <div class="form-group required">
                         <label class="col-sm-2 control-label" for="input-name">Họ và tên</label>
                         <div class="col-sm-10">
-                            <input type="text" name="name" value="" placeholder="Họ và tên" id="input-name" autofocus class="form-control" />
+                            <input type="text" name="name" value="" placeholder="Họ và tên" id="input-name"  class="form-control" />
                         </div>
                     </div>
                     <div class="form-group required">
                         <label class="col-sm-2 control-label" for="input-phone">Điện thoại</label>
                         <div class="col-sm-10">
                             <input type="text" name="phone" value="" placeholder="Nhấp số điện thoại" id="input-phone" class="form-control" />
-                        </div>
+                    </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="input-country">Tỉnh/Thành phố</label>
@@ -187,7 +177,7 @@
                     </div>
 
 
-                    <div class="form-group required">
+                    <div class="form-group required" on>
                         <label class="col-sm-2 control-label" for="input-ward">Phường/Xã</label>
                         <div class="col-sm-10">
                             <select name="ward" id="input-ward" class="form-control">
@@ -232,7 +222,7 @@
                 <div class="buttons clearfix">
                     <div class="pull-left"><a href="<%=Util.fullPath("MyAccount")%>" class="btn btn-default">Back</a></div>
                     <div class="pull-right">
-                        <input type="submit" value="Continue" class="btn btn-primary" />
+                        <input type="submit" id="sunn" value="Continue" class="btn btn-primary" />
                     </div>
                 </div>
             </form>
@@ -375,7 +365,44 @@ $('.time').datetimepicker({
 <%--$('select[name=\'country_id\']').trigger('change');--%>
 <%--//--></script>--%>
 <%@ include file="Layout/footer.jsp" %>
+<script>
+        // document.getElementById('input-phone').onfocus = function () {
+        //    console.log("focus");
+        //     if ($('.form-group')[1].classList.contains('has-error')) {
+        //
+        //         $('.form-group')[1].classList.remove('has-error');
+        //         $("input#input-phone").next().remove();
+        //     }
+        // };
 
+        // document.getElementById('input-phone').onblur = function () {
+        //     console.log("blur");
+        //     jQuery(function () {
+        //             var VAL = $('#input-phone').val();
+        //             console.log(VAL);
+        //             var phoneNumberRegex = /(09|01[2|6|8|9])+([0-9]{8})\b/g;
+        //             if (phoneNumberRegex.test(VAL)) {
+        //                 console.log('har-error');
+        //                $('.form-group')[1].className += ' has-error';
+        //                 var node = document.createElement("DIV");
+        //                 var textnode = document.createTextNode("Vui lòng nhập Họ và tên");
+        //                 node.appendChild(textnode);
+        //                 node.classList.add("text-danger");
+        //                 // var alertt = '<div class="text-danger">Vui lòng nhập Họ và tên</div>';
+        //                 $(".col-sm-10")[1].appendChild(node);
+        //             }
+        //     });
+            // if (this.value === "") {
+            //     this.parentElement.parentElement.className += ' has-error';
+            //     var node = document.createElement("DIV");
+            //     var textnode = document.createTextNode("Vui lòng nhập Họ và tên");
+            //     node.appendChild(textnode);
+            //     node.classList.add("text-danger");
+            //     // var alertt = '<div class="text-danger">Vui lòng nhập Họ và tên</div>';
+            //     $(".col-sm-10")[1].appendChild(node);
+            // }
+        // };
+</script>
 <!--
 OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
 Please donate via PayPal to donate@opencart.com

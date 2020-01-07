@@ -19,6 +19,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import static vn.edu.nlu.fit.DB.ConnectionDB.con;
@@ -35,9 +36,12 @@ public class DoLogin extends HttpServlet {
         String pass = request.getParameter("password");
         String spl = "SELECT * FROM users WHERE email=?";
         String sql = "SELECT  size,product_id,shopping_cart.id,shopping_cart.price,product.`name`, product.image, quality, topping FROM shopping_cart JOIN product on shopping_cart.product_id= product.id WHERE user_id=?";
+        String sqlAddress = "SELECT address.name,address.phone, province.`name` as \"province\", district.name as \"district\" , ward.name as \"ward\", address.address as \"address\", address.type_address, address.`default` FROM address JOIN province on address.province_id= province.id JOIN \n" +
+                "district on address.district_id = district.id JOIN ward on address.ward_id = ward.id WHERE user_id = ?";
         PreparedStatement pre = null;
         PreparedStatement pre2 = null;
         PreparedStatement psTopping= null;
+        PreparedStatement psAddress = null;
         try {
             pre = ConnectionDB.connect(spl);
             pre.setString(1, email);
@@ -104,6 +108,29 @@ public class DoLogin extends HttpServlet {
 //                    response.getWriter().println(item.getToppingList().get(0).getName());
                     shoppingCart.setListItem(item);
 //                    response.getWriter().println("adsad");
+                }
+                psAddress = ConnectionDB.connect(sqlAddress);
+                psAddress.setInt(1, user.getId());
+                ResultSet rsAddress = psAddress.executeQuery();
+                while (rsAddress.next()){
+                    Address address = new Address();
+                    address.setName(rsAddress.getString("name"));
+                    address.setPhone(rsAddress.getString("phone"));
+                    address.setProvince(rsAddress.getString("province"));
+                    address.setDistrict(rsAddress.getString("district"));
+                    address.setWard(rsAddress.getString("ward"));
+                    address.setAddress(rsAddress.getString("address"));
+                    if (rsAddress.getInt("type_address")==1){
+                        address.setType_address("Nhà riêng / Chung cư");
+                    }else{
+                        address.setType_address("Cơ quan / Công ty");
+                    }
+                    address.setDefaultt(rsAddress.getInt("default"));
+                    user.getAddressList().add(address);
+                    if (rsAddress.getInt("default")==1){
+                        Collections.swap(user.getAddressList(),0,user.getAddressList().size()-1);
+                    }
+
                 }
                 user.setShoppingCart(shoppingCart);
                 session.setAttribute("user", user);

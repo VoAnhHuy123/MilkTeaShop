@@ -1,6 +1,7 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="vn.edu.nlu.fit.Model.*" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="javax.jws.soap.SOAPBinding" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>﻿
 
 <!DOCTYPE html>
@@ -15,7 +16,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Address Book</title>
-    <base href="https://demo.codezeel.com/opencart/OPC04/OPC040082/" />
 
     <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
     <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
@@ -35,7 +35,7 @@
 
 
 
-    <link href="https://demo.codezeel.com/opencart/OPC04/OPC040082/image/catalog/cart.png" rel="icon" />
+    <link href="image/catalog/cart.png" rel="icon" />
     <!-- Codezeel www.codezeel.com - Start -->
     <script type="text/javascript" src="catalog/view/javascript/codezeel/custom.js"></script>
     <script type="text/javascript" src="catalog/view/javascript/codezeel/jstree.min.js"></script>
@@ -88,34 +88,9 @@
         <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/account">Account</a></li>
         <li><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/address">Address Book</a></li>
     </ul>
-    <div class="row"><aside id="column-left" class="col-sm-3 hidden-xs">
-        <div class="box">
-            <div class="box-heading">Account</div>
-            <div class="list-group">
+    <div class="row">
 
-                <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/account " class="list-group-item">My Account </a>
-
-                <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/edit " class="list-group-item">Edit Account</a> <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/password" class="list-group-item">Password</a>
-
-                <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/address" class="list-group-item">Address Book</a> <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/wishlist " class="list-group-item">Wish List </a> <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/order " class="list-group-item">Order History </a> <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/download" class="list-group-item">Downloads </a><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/recurring" class="list-group-item">Recurring payments </a> <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/reward " class="list-group-item">Reward Points </a> <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/return" class="list-group-item">Returns </a> <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/transaction" class="list-group-item">Transactions </a> <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/newsletter" class="list-group-item">Newsletter </a>
-
-                <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/logout" class="list-group-item">Logout </a>
-
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="box-heading">Information</div>
-            <div class="list-group">
-                <a class="list-group-item" href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=information/information&amp;information_id=4">About Us </a>
-                <a class="list-group-item" href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=information/information&amp;information_id=6">Delivery Information </a>
-                <a class="list-group-item" href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=information/information&amp;information_id=3">Privacy Policy </a>
-                <a class="list-group-item" href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=information/information&amp;information_id=5">Terms &amp; Conditions </a>
-                <a class="list-group-item" href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=information/contact">Contact Us </a>
-                <a class="list-group-item" href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=information/sitemap">Site Map </a>
-            </div>
-        </div>
-    </aside>
+        <%@ include file="Layout/accountmenu.jsp"%>
 
         <div id="content" class="col-sm-9">
             <h2>Address Book Entries</h2>
@@ -129,16 +104,24 @@
             <%}else{%>
             <div class="table-responsive">
                 <table class="table table-bordered table-hover">
+                    <%
+                        ArrayList<Address> addressArrayList = (ArrayList<Address>) user.getAddressList();
+                        for (int i = 0; i < addressArrayList.size(); i++){
+                    %>
                     <tr>
-                        <td class="text-left">Võ Huy<br />Nông Lâm University<br />Thủ Đức<br />HCM, Hawaii 71308<br />United States</td>
-                        <td class="text-right"><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/address/edit&amp;address_id=8" class="btn btn-info">Edit</a> &nbsp; <a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/address/delete&amp;address_id=8" class="btn btn-danger">Delete</a></td>
+                        <td class="text-left">
+                            <p><%=addressArrayList.get(i).getName()%></p>
+                            <p>Địa chỉ: <%=addressArrayList.get(i).getAddress()%></p>
+                            <p>Điện thoại: <%=addressArrayList.get(i).getPhone()%></p>
+                        </td>
+                        <td class="text-right"><a href="" class="btn btn-info">Edit</a> &nbsp; <a href="" class="btn btn-danger">Delete</a></td>
                     </tr>
+                    <%}%>
                 </table>
             </div>
             <%}%>
             <div class="buttons clearfix">
-                <div class="pull-left"><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/account" class="btn btn-default">Back</a></div>
-                <div class="pull-right"><a href="https://demo.codezeel.com/opencart/OPC04/OPC040082/index.php?route=account/address/add" class="btn btn-primary">New Address</a></div>
+                <div class="pull-right"><a href="<%=Util.fullPath("NewAddress")%>" class="btn btn-primary">New Address</a></div>
             </div>
         </div>
     </div>

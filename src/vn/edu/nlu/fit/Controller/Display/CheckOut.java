@@ -12,8 +12,8 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-@WebServlet("/EditAccount")
-public class EditAccount extends HttpServlet {
+@WebServlet("/CheckOut")
+public class CheckOut extends HttpServlet {
 
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -24,7 +24,7 @@ public class EditAccount extends HttpServlet {
             PreparedStatement s = ConnectionDB.connect(sql);
             ResultSet sr1 = s.executeQuery();
             request.setAttribute("a", sr1);
-            request.getRequestDispatcher("Editaccount.jsp").forward(request, response);
+            request.getRequestDispatcher("Checkout.jsp").forward(request, response);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {

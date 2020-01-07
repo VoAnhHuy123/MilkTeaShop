@@ -12,19 +12,18 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-@WebServlet("/MyAccount")
-public class MyAccount extends HttpServlet {
+@WebServlet("/MyAccount1")
+public class MyAccount1 extends HttpServlet {
 
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String sql = "SELECT * FROM type WHERE active=1";
 //        String sqlId = "SELECT * FORM product WHERE active =1";
-        String email = request.getParameter("email");
         try {
             PreparedStatement s = ConnectionDB.connect(sql);
             ResultSet sr1 = s.executeQuery();
             request.setAttribute("a", sr1);
-            request.getRequestDispatcher("Editaccount.jsp").forward(request, response);
+            request.getRequestDispatcher("Myaccount.jsp").forward(request, response);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {

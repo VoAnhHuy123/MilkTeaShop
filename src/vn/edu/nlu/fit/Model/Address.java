@@ -7,10 +7,10 @@ public class Address {
     String district;
     String ward;
     String address;
-    int type_address;
+    String type_address;
     int defaultt;
 
-    public Address(String name, String phone, String province, String district, String ward, String address, int type_address, int defaultt) {
+    public Address(String name, String phone, String province, String district, String ward, String address, String type_address, int defaultt) {
 
         this.name = name;
         this.phone = phone;
@@ -20,6 +20,9 @@ public class Address {
         this.address = address;
         this.type_address = type_address;
         this.defaultt = defaultt;
+    }
+
+    public Address() {
     }
 
     public String getName() {
@@ -70,11 +73,11 @@ public class Address {
         this.address = address;
     }
 
-    public int getType_address() {
+    public String getType_address() {
         return type_address;
     }
 
-    public void setType_address(int type_address) {
+    public void setType_address(String type_address) {
         this.type_address = type_address;
     }
 

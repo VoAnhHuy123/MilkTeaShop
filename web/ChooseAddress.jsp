@@ -1,4 +1,6 @@
 <%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="vn.edu.nlu.fit.Model.*" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 ﻿
 
@@ -52,6 +54,13 @@
     <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
 
     <style>
+        .name {
+            color: black;
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
         .progressbar {
             margin: 0;
             padding: 0;
@@ -109,51 +118,110 @@
         .progressbar li.active + li:after {
             background-color: #e49f02;
         }
+
         .panel-body {
-            padding: 5px;
+            padding: 10px 15px 0;
         }
-        body{
+
+        body {
+            background-color: #f4f4f4;
             color: #333;
-            background: #f4f4f4;
         }
-        .item{
-            min-height: 100px;
-            /* height: auto; */
-            padding-top: 12px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #c9c9c9;
-            font-size: 11px;
+
+        #content1 {
+            padding-top: 10px;
+            display: none;
+            border: 1px solid #ddd;
+            background: #f7f7f7;
+            padding-right: 220px;
+            padding-left: 220px;
         }
-        .title{
-            line-height: 43px;
-            width: 170px;
-            float: left;
+
+        #content {
+            min-height: 400px;
         }
-        .title1{
-            width: 170px;
-            float: left;
+
+        html {
+            scroll-behavior: smooth;
         }
-        .price{
-            float: right;
-            margin-bottom: 0;
+        .address-item.is-default{
+            border: 1px dashed #090;
         }
-        .order{
-            border-bottom: 1px solid #c9c9c9;
-            padding-bottom: 10px;
+        span.customSelect {
+            font-size: 14px;!important;
         }
-        .end{
-            font-size: 13px;
+        .form-control{
+            color: #333;
         }
-        .information{
-            font-size: 13px;
+        .btn{
+            text-transform: none;!important;
         }
-        .information h6{
-            font-size: 15px;
-            font-weight: 700;
-            margin-top: 15px;
-            margin-bottom: 10px;
-        }
+
     </style>
+    <script src="js/ajax.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#input-zone").change(function () {
+                var idDistrict = $(this).children("option:selected").val();
+                $.ajax({
+                    url: 'http://localhost:8080/MilkTeaShop/NewAddress',
+                    type: 'GET',
+                    dataType: 'text',
+                    data: {idDistrict: idDistrict},
+                    success: function (abc) {
+
+                        var result = " <option value=\"\">Chọn Phường/Xã</option>";
+                        var f = JSON.parse(abc);
+                        for (var i = 0; i < f.length; i++) {
+
+                            result += "\n" + "<option value=\"" + f[i].id + "\">" + f[i].name + "</option>" + "\n";
+                        }
+                        $('#input-ward').html(result);
+                        document.getElementsByClassName('customSelectInner')[1].innerHTML = "Chọn Phường/Xã";
+                    }
+
+                })
+            });
+            $("#addNewAddress").click(function () {
+                $("#content1").css("display", "block");
+                window.scrollTo(0, 300);
+            });
+        });
+
+        $(document).ready(function () {
+            $(".edit-address").click(function () {
+               var index = $(this).attr("data-index");
+
+               $.ajax({
+                   url: 'http://localhost:8080/MilkTeaShop/QuickEditAddress',
+                   type: 'GET',
+                   dataType: 'text',
+                   data: {index: index},
+                   success: function (abc) {
+
+                       var json = JSON.parse(abc);
+                       // alert(json.type_address);
+                        $("#input-name").val(json.name);
+                        $("#input-phone").val(json.phone);
+                       document.getElementsByClassName('customSelectInner')[0].innerHTML=json.district;
+                       document.getElementsByClassName('customSelectInner')[1].innerHTML=json.ward;
+                        $("#input-address").val(json.address);
+                       document.getElementsByClassName('customSelectInner')[2].innerHTML=json.type_address;
+                       $("#input-typeaddress").val(json.type_address);
+                       $("#input-ward").attr("value", json.ward);
+                       console.log("ward");
+                       // console.log(json.ward);
+                       console.log($("district").val());
+                       $("#update1").attr("index", index);
+                       $("form").attr("action", "http://localhost:8080/MilkTeaShop/SaveAddress?index=" + index);
+
+                   }
+               })
+                $("#content1").css("display", "block");
+                window.scrollTo(0, 300);
+            })
+        });
+    </script>
 </head>
 
 
@@ -161,7 +229,7 @@
 <% ResultSet rs = (ResultSet) request.getAttribute("a"); %>
 <%@ include file="Layout/header.jsp" %>
 <div class="wrap-breadcrumb parallax-breadcrumb">
-    <div class="container"></div>
+    <div class=""></div>
 </div>
 
 <!-- ======= Quick view JS ========= -->
@@ -202,92 +270,183 @@
             <div class="container col-sm-12" style="margin-bottom: 50px;">
                 <ul class="progressbar">
                     <li class="active">Đăng nhập</li>
-                    <li class="active">Địa chỉ giao hàng</li>
-                    <li class="active">Thanh toán & Đặt mua</li>
+                    <li>Địa chỉ giao hàng</li>
+                    <li>Thanh toán & Đặt mua</li>
                 </ul>
             </div>
+            <div>
+                <div class="container">
+                    <span>Chọn địa chỉ giao hàng có sẵn bên dưới</span>
+                </div>
 
-            <div class="panel-group col-sm-5" id="accordion" style="margin-right: 15px;">
-                <p><strong>Chọn hình thức thanh toá</strong></p>
-                <div class="panel" style="border: 1px solid #e5e5e5; padding-left: 10px">
-                    <div class="radio">
-                        <label> <input type="radio" name="method_cod" value="flat.flat" checked="checked">
-                            Thanh toán khi nhân hàng </label>
-                    </div>
-                    <div class="radio">
-                        <label> <input type="radio" name="method_momo" value="flat.flat" checked="checked">
-                            Thanh toán bằng ví MoMo</label>
-                    </div>
-                </div>
-                <p><strong>Ghi chú đơn hàng</strong></p>
-                <p>
-                    <textarea name="comment" rows="4" class="form-control"></textarea>
-                </p>
-            </div>
-            <div class="col-sm-7 row" style="margin-top: 36px;">
-                <div class="col-sm-6 panel panel-default cart">
-                    <div class="panel-body">
-                        <div class="order">
-                        <span class="title">
-                                                            Địa chỉ giao hàng
-                                                    </span>
-                            <a href="https://tiki.vn/checkout/shipping" class="btn btn-default btn-custom1">Sửa</a>
-                        </div>
-                        <div class="information">
-                            <h6>Võ Huy</h6>
-                            <p class="end">kjkj, Xã Phú Lâm, Huyện Yên Sơn, Tuyên Quang<br>Việt Nam<br>Điện thoại:
-                                0937339896</p>
-                        </div>
-                    </div>
-                </div>
-                <div id="panel-cart" class="col-sm-6">
-                    <div class="panel panel-default cart">
-                        <div class="panel-body">
-                            <div class="order">
-                                <span class="title">Đơn Hàng</span>
-                                <a href="/checkout/cart/" class="btn btn-default btn-custom1">Sửa</a>
+                <div class="row-address-list" style="margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+        font-size: 14px;
+    overflow: hidden;
+    clear: both;
+    width: 100%;">
+                    <% HttpSession session1 = request.getSession();
+                        User user = (User) session1.getAttribute("user");
+                        ArrayList<Address> addressArrayList = (ArrayList<Address>) user.getAddressList();
+                        String is_default="";
+                        for (int i = 0; i < addressArrayList.size(); i++) {
+                            if (i==0){
+                                is_default="is-default";
+                            }else{
+                                is_default="";
+                            }
+                    %>
+                    <div class="col-lg-6 col-md-6 col-sm-6 item" id="item-11794124">
+                        <div class="panel panel-default address-item <%=is_default%>">
+                            <div class="panel-body">
+                                <span class="name"><%=addressArrayList.get(i).getName()%></span> <br>
+                                <span class="address" title="sdfadf, Phường Linh Trung, Quận Thủ Đức, Hồ Chí Minh">
+                                    Địa chỉ: <%=addressArrayList.get(i).getAddress()%>, <%=addressArrayList.get(i).getWard()%>, <%=addressArrayList.get(i).getDistrict()%>, Hồ Chí Minh </span>
+                                <br>
+                                <span class="address">
+                                    Việt Nam </span> <br>
+                                <span class="phone">Điện thoại: <%=addressArrayList.get(i).getPhone()%></span> <br>
+                                <p class="action">
+                                    <a href="<%=Util.fullPath("ProcessAddress?index=") + i%>">
+                                    <button type="button"  data-id="11794124" class="btn btn-default btn-custom1 saving-address
+                                            is-black
+                        " admicro-data-event="100117" admicro-data-auto="1" admicro-data-order="false">
+
+                                        Giao đến địa chỉ này
+                                    </button>
+                                    </a>
+                                    <button type="button" class="btn btn-default btn-custom1 edit-address"
+                                            data-index="<%=i%>">
+                                        Sửa
+                                    </button>
+                                    <%
+                                        if (i != 0) {
+                                    %>
+                                    <button type="button" class="btn btn-default btn-custom1 deleting"
+                                            data-index="<%=i%>">Xóa
+                                    </button>
+                                    <%}%>
+                                </p>
+                                <%if (i == 0) {%>
+                                <span class="default" style="    position: absolute;
+    top: 10px;
+   right: 35px;
+    display: block;
+    font-size: 11px;
+    color: #090;">Mặc định</span>
+                                <%}%>
                             </div>
-                            <div class="product">
-                                <div class="item">
-                                    <p class="title1">
-                                        <strong>1 x</strong><a
-                                            href=""
-                                            target="_blank">Túi 100 Quả Bóng Nhựa Cho Bé Vui Chơi</a>
-                                        <span class="seller-by">
-                                </span>
-                                    </p>
-
-
-                                    <p class="price text-right">
-                                        <span>61.000đ </span>
-                                    </p>
+                        </div>
+                    </div>
+                    <%}%>
+                </div>
+                <div class="container">
+                    <p class="other">
+                        Bạn muốn giao hàng đến địa chỉ khác?
+                        <a id="addNewAddress">
+                            Thêm địa chỉ giao hàng mới
+                        </a>
+                    </p>
+                </div>
+                <div id="content1" class="col-sm-12">
+                    <form action="" method="post" class="form-horizontal">
+                        <fieldset>
+                            <div class="form-group required">
+                                <label class="col-sm-2 control-label" for="input-name">Họ và tên</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="name" value="" placeholder="Họ và tên" id="input-name"
+                                           class="form-control"/>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <label class="col-sm-2 control-label" for="input-phone">Điện thoại</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="phone" value="" placeholder="Nhấp số điện thoại"
+                                           id="input-phone" class="form-control"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label" for="input-country">Tỉnh/Thành phố</label>
+                                <div class="col-sm-10">
+                                    <div type="text" name="province" disabled value="Hồ Chí Minh" id="input-country"
+                                         class="form-control"> Hồ Chí Minh
+                                    </div>
                                 </div>
                             </div>
 
-                            <p class="list-info-price">
-                                <b>Tạm tính</b>
-                                <span>61.000đ</span>
-                            </p>
-                            <p class="list-info-price">
-                                <b>Phí vận chuyển</b>
-                                <span>18.000đ</span>
-                            </p>
+                            <div class="form-group required">
+                                <label class="col-sm-2 control-label" for="input-zone">Quận/Huyện</label>
+                                <div class="col-sm-10">
+                                    <select name="district" id="input-zone" class="form-control">
+                                        <option value="">Chọn Quận/Huyện</option>
+                                        <%
+                                            ResultSet rsDistrict = (ResultSet) request.getAttribute("district");
+                                            if (rsDistrict != null) {
+                                                while (rsDistrict.next()) {
+                                        %>
+                                        <option value="<%=rsDistrict.getString("id")%>"><%=rsDistrict.getString("name")%>
+                                        </option>
+                                        <%
+                                                }
+                                            }
+                                        %>
+                                    </select>
+                                </div>
+                            </div>
 
-                            <p class="total2">
-                                Thành tiền:
-                                <span>79.000đ </span>
-                            </p>
-                            <p class="text-right">
-                                <i>(Đã bao gồm VAT nếu có)</i>
-                            </p>
+
+                            <div class="form-group required" on>
+                                <label class="col-sm-2 control-label" for="input-ward">Phường/Xã</label>
+                                <div class="col-sm-10">
+                                    <select name="ward" id="input-ward" class="form-control">
+                                        <option value="">Chọn Phường/Xã</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <label class="col-sm-2 control-label" for="input-address">Địa chỉ</label>
+                                <div class="col-sm-10">
+                            <textarea name="address" id="input-address" class="form-control">
+
+                            </textarea>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <label class="col-sm-2 control-label" for="input-typeaddress">Loại địa chỉ</label>
+                                <div class="col-sm-10">
+                                    <select name="typeaddress" id="input-typeaddress" class="form-control">
+                                        <option value="">Chọn Loại địa chỉ</option>
+                                        <%
+                                            ResultSet rsTypeAddress = (ResultSet) request.getAttribute("typeaddress");
+                                            if (rsTypeAddress != null) {
+                                                while (rsTypeAddress.next()) {
+                                        %>
+                                        <option value="<%=rsTypeAddress.getInt("id")%>"><%=rsTypeAddress.getString("name")%>
+                                        </option>
+                                        <%
+                                                }
+                                            }
+                                        %>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="buttons clearfix">
+                            <div class="pull-left"><a class="btn btn-default">Hủy bỏ</a>
+                            </div>
+                            <div class="pull-right">
+                                <input id="update1" type="submit" value="Cập nhật" class="btn btn-primary"/>
+                            </div>
                         </div>
-                    </div>
-
+                    </form>
                 </div>
             </div>
         </div>
 
     </div>
+
 </div>
 <%--<script type="text/javascript"><!----%>
 <%--$(document).on('change', 'input[name=\'account\']', function() {--%>
